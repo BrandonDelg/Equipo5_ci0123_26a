@@ -45,6 +45,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
     std::string figura = std::string(msg->figura);
     std::cout << "[SERVIDOR PIEZAS] Procesando solicitud: " << figura << std::endl;
     bool error = false;
+    bool list = false;
     if (figura == "GET_figures") {
         piezas =
         "Listado de Figuras en el servidor :)\n"
@@ -52,7 +53,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
         "- Gato \n"
         "- Ballena \n"
         "- Oveja \n";
-
+        list = true;
     } else if (figura.find("figure_") == 0) {
 
         std::cout << "[SERVIDOR PIEZAS] Buscando piezas de " << figura << std::endl;
@@ -120,19 +121,24 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
 
         } else {
             piezas = "La figura ingresada no es valida!\n";
+            error = true;
         }
 
     } else {
         piezas = "Comando Invalido!\n";
+        error = true;
     }
 
     Message* resp = new Message();
     if (error) {
         resp->type = ERROR;
+    } else if (list){
+        resp->type = RESPONSE_FIGURES;
     } else {
         resp->type = RESPONSE_PIECES;
     }
     error = false;
+    list = false;
     strcpy(resp->figura, msg->figura);
     resp->mitad = msg->mitad;
 

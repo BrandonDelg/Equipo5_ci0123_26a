@@ -49,8 +49,11 @@ bool Cliente::receive_from_server() {
     }
     if (msg->type == RESPONSE_PIECES) {
         std::cout << "\n[CLIENTE] Piezas necesarias:" << std::endl;
+    } else if (msg->type == ERROR) {
+        std::cout << "\n[CLIENTE] ERROR:" << std::endl;
+    } else if (msg->type == RESPONSE_FIGURES) {
+        std::cout << "\n[CLIENTE]: Respuesta del servidor" << std::endl;
     }
-
     std::cout << "\n" << msg->message << std::endl;
 
     delete msg;

@@ -1,0 +1,4 @@
+GET_figures
+GET figure_Perro 1
+GET figure_Gato 1
+Exit

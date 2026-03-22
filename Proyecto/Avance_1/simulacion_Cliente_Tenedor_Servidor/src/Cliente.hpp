@@ -5,6 +5,7 @@
 enum Type {
     REQUEST_FIGURE,
     RESPONSE_PIECES,
+    ERROR,
     CLOSE
 };
 

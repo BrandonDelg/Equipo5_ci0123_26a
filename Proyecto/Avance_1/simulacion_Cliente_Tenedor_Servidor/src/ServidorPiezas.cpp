@@ -43,9 +43,8 @@ void ServidorPiezas::listen() {
 void ServidorPiezas::procesarSolicitud(Message* msg) {
     std::string piezas;
     std::string figura = std::string(msg->figura);
-
     std::cout << "[SERVIDOR PIEZAS] Procesando solicitud: " << figura << std::endl;
-
+    bool error = false;
     if (figura == "GET_figures") {
         piezas =
         "Listado de Figuras en el servidor :)\n"
@@ -57,7 +56,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
     } else if (figura.find("figure_") == 0) {
 
         std::cout << "[SERVIDOR PIEZAS] Buscando piezas de " << figura << std::endl;
-
+        
         if (figura == "figure_Perro") {
             if (msg->mitad == 1) {
                 piezas =
@@ -69,8 +68,10 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 "lego 3x2 : 4\n"
                 "lego 3x3 : 2\n"
                 "lego 3x4 : 3\n";
+            } else {
+                piezas = "No existe la mitad indicada:\n";
+                error = true;
             }
-
         } else if (figura == "figure_Gato") {
             if (msg->mitad == 1) {
                 piezas =
@@ -80,6 +81,9 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 piezas =
                 "lego 6x2 : 4\n"
                 "lego 2x2 : 2\n";
+            } else {
+                piezas = "No existe la mitad indicada:\n";
+                error = true;
             }
 
         } else if (figura == "figure_Ballena") {
@@ -93,6 +97,9 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 "lego 1x2 : 4\n"
                 "lego 4x2 : 2\n"
                 "lego 3x4 : 3\n";
+            } else {
+                piezas = "No existe la mitad indicada:\n";
+                error = true;
             }
 
         } else if (figura == "figure_Oveja") {
@@ -106,6 +113,9 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 "lego 1x2 : 4\n"
                 "lego 4x2 : 2\n"
                 "lego 3x4 : 3\n";
+            } else {
+                piezas = "No existe la mitad indicada:\n";
+                error = true;
             }
 
         } else {
@@ -117,7 +127,12 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
     }
 
     Message* resp = new Message();
-    resp->type = RESPONSE_PIECES;
+    if (error) {
+        resp->type = ERROR;
+    } else {
+        resp->type = RESPONSE_PIECES;
+    }
+    error = false;
     strcpy(resp->figura, msg->figura);
     resp->mitad = msg->mitad;
 

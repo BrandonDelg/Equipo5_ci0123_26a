@@ -47,9 +47,11 @@ bool Cliente::receive_from_server() {
         delete msg;
         return false;
     }
+    if (msg->type == RESPONSE_PIECES) {
+        std::cout << "\n[CLIENTE] Piezas necesarias:" << std::endl;
+    }
 
-    std::cout << "\n[CLIENTE] Piezas necesarias:" << std::endl;
-    std::cout << msg->message << std::endl;
+    std::cout << "\n" << msg->message << std::endl;
 
     delete msg;
     return true;

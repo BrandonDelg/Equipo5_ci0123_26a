@@ -48,14 +48,18 @@ int main() {
             msg->type = REQUEST_FIGURE;
             if (op == "GET_figures") {
                 strcpy(msg->figura, "GET_figures");
-            } else if (op.find("GET ") == 0) {
+            } else if (op.find("GET figure") == 0) {
                 std::string resto = op.substr(4);
                 size_t pos = resto.find(" ");
-
+                int mitad;
                 std::string figura = resto.substr(0, pos);
-                int mitad = std::stoi(resto.substr(pos + 1));
-
-                msg->mitad = mitad;
+                if (isdigit(resto[pos + 1])) {
+                    mitad = std::stoi(resto.substr(pos + 1));
+                    msg->mitad = mitad;
+                } else {
+                    std::cout << "Mitad invalida, intente nuevamente" << std::endl;
+                    continue;
+                }
                 strcpy(msg->figura, figura.c_str());
 
             } else {

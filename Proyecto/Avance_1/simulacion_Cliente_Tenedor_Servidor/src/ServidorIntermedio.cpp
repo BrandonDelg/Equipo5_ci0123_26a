@@ -52,7 +52,7 @@ void ServidorIntermedio::listen() {
             break;
         }
         std::cout << "[ROUTER] Recibe solicitud del cliente" << std::endl;
-        std::cout << "[ROUTER] Consultando servidor de piezas :)" << std::endl;
+        std::cout << "[ROUTER] Consultando servidor de piezas" << std::endl;
 
         if(servidor) {
             Message* copia_msg = new Message();

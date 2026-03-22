@@ -26,7 +26,7 @@ void Cliente::send_to_server(void* package) {
     pthread_cond_signal(&queueCond);
     pthread_mutex_unlock(&queueMutex);
     if (msg->type != CLOSE) {
-        std::cout << "[CLIENTE] Solicitud enviada -> Figura: " << msg->figura << " mitad: " << msg->mitad << std::endl;
+        std::cout << "[CLIENTE] Solicitud enviada" << std::endl;
     } else {
         std::cout << "[CLIENTE] Solicitud enviada -> Exit "<< std::endl;
     }

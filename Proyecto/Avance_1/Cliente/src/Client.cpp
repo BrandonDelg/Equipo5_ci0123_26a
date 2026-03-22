@@ -9,6 +9,7 @@
 #define MAXBUF 1024
 
 int main( int argc, char * argv[] ) {
+   (void)argv;
    Parser parser;
    VSocket * client;
    int st;
@@ -23,8 +24,10 @@ int main( int argc, char * argv[] ) {
 
    if (argc > 1) {
       client = new SSLSocket();
+      std::cout << "Cliente ssl creado" << std::endl;
    } else {
       client = new Socket('s');
+      std::cout << "Cliente creado" << std::endl;
    }
 
    memset(a, 0, MAXBUF);
@@ -41,7 +44,7 @@ int main( int argc, char * argv[] ) {
    std::vector<std::string> figuras = parser.getFiguras();
 
    if (!figuras.empty()) {
-      std::string piezaElegida = figuras[0];
+      std::string piezaElegida = figuras[1];
       int parteElegida = 1;
 
       std::string path = "/lego/list.php?figure=" + piezaElegida + "&part=" + std::to_string(parteElegida);      

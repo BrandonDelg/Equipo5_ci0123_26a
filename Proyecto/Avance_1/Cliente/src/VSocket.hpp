@@ -4,7 +4,7 @@
 class VSocket {
    public:
        void Init( char, bool = false );
-      ~VSocket();
+       virtual ~VSocket();
 
       void Close();
       int TryToConnect( const char *, int );

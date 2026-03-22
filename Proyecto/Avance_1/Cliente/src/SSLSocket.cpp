@@ -39,14 +39,19 @@ SSLSocket::SSLSocket( bool IPv6 ) {
   *  @param     bool IPv6: if we need a IPv6 socket
   *
  **/
-SSLSocket::SSLSocket( char * certFileName, char * keyFileName, bool IPv6 ) {
+SSLSocket::SSLSocket(char * certFileName, char * keyFileName, bool IPv6) {
+
    this->Init('s', IPv6);
+
    const SSL_METHOD * method = TLS_server_method();
    SSL_CTX * ctx = SSL_CTX_new(method);
+
    if (!ctx) {
       throw std::runtime_error("SSLSocket: failed to create SSL_CTX");
    }
+
    this->Context = ctx;
+   this->LoadCertificates(certFileName, keyFileName);
 }
 
 
@@ -59,6 +64,8 @@ SSLSocket::SSLSocket( char * certFileName, char * keyFileName, bool IPv6 ) {
 SSLSocket::SSLSocket( int id ) {
 
    this->Init( id );
+   this->Context = nullptr;
+   this->BIO = nullptr;
 
 }
 
@@ -73,12 +80,13 @@ SSLSocket::~SSLSocket() {
    if ( nullptr != this->Context ) {
       SSL_CTX_free( reinterpret_cast<SSL_CTX *>( this->Context ) );
    }
-   if ( nullptr != this->BIO ) {
-      SSL_free( reinterpret_cast<SSL *>( this->BIO ) );
+   SSL * ssl = (SSL *) this->BIO;
+   if (ssl) {
+      SSL_shutdown(ssl);
+      SSL_free(ssl);
    }
 
    this->Close();
-
 }
 
 
@@ -90,10 +98,7 @@ SSLSocket::~SSLSocket() {
   *
  **/
 void SSLSocket::InitSSL( bool serverContext ) {
-   SSL * ssl = nullptr;
-
    this->InitContext( serverContext );
-
 }
 
 
@@ -136,9 +141,28 @@ void SSLSocket::InitContext(bool serverContext) {
  *  @param	const char * keyFileName, file containing keys
  *
  **/
- void SSLSocket::LoadCertificates( const char * certFileName, const char * keyFileName ) {
+void SSLSocket::LoadCertificates(const char * certFileName, const char * keyFileName) {
+
+   SSL_CTX * ctx = reinterpret_cast<SSL_CTX *>(this->Context);
+
+   if (!ctx) {
+      throw std::runtime_error("SSLSocket::LoadCertificates: Context is null");
+   }
+
+   if (SSL_CTX_use_certificate_file(ctx, certFileName, SSL_FILETYPE_PEM) <= 0) {
+      ERR_print_errors_fp(stderr);
+      throw std::runtime_error("Error loading certificate file");
+   }
+
+   if (SSL_CTX_use_PrivateKey_file(ctx, keyFileName, SSL_FILETYPE_PEM) <= 0) {
+      ERR_print_errors_fp(stderr);
+      throw std::runtime_error("Error loading private key file");
+   }
+
+   if (!SSL_CTX_check_private_key(ctx)) {
+      throw std::runtime_error("Private key does not match the certificate public key");
+   }
 }
- 
 
 /**
  *  Connect
@@ -240,7 +264,7 @@ size_t SSLSocket::Read( void * buffer, size_t size ) {
 size_t SSLSocket::Write( const char * string ) {
    SSL * ssl = (SSL *) this->BIO;
    int st = SSL_write(ssl, string, strlen(string));
-   if ( -1 == st ) {
+   if ( st <= 0 ) {
       throw std::runtime_error( "SSLSocket::Write( const char * )" );
    }
 
@@ -264,7 +288,7 @@ size_t SSLSocket::Write( const char * string ) {
 size_t SSLSocket::Write( const void * buffer, size_t size ) {
    SSL * ssl = (SSL *) this->BIO;
    int st = SSL_write(ssl, buffer, size);
-   if ( -1 == st ) {
+   if (  st <= 0 ) {
       throw std::runtime_error( "SSLSocket::Write( void *, size_t )" );
    }
 

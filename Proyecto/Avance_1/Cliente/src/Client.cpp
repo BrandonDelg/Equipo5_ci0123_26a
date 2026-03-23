@@ -8,77 +8,145 @@
 
 #define MAXBUF 1024
 
-int main( int argc, char * argv[] ) {
-   (void)argv;
-   Parser parser;
-   VSocket * client;
-   int st;
-   std::string html;
-   char a[MAXBUF];
+void ClientRequestList(VSocket* client, const char* service) {
    char * os = (char *) "os.ecci.ucr.ac.cr";
    char * request = (char *)
-   "GET /lego/index.php HTTP/1.1\r\n"
-   "Host: os.ecci.ucr.ac.cr\r\n"
-   "Connection: close\r\n"
-   "\r\n";
-
-   if (argc > 1) {
-      client = new SSLSocket();
-      std::cout << "Cliente ssl creado" << std::endl;
-   } else {
-      client = new Socket('s');
-      std::cout << "Cliente creado" << std::endl;
-   }
-
-   memset(a, 0, MAXBUF);
-
-   client->Connect(os, (argc > 1 ? "https" : "http"));
+      "GET /lego/index.php HTTP/1.1\r\n"
+      "Host: os.ecci.ucr.ac.cr\r\n"
+      "Connection: close\r\n"
+      "\r\n";
+   client->Connect(os, service);
    client->Write(request, strlen(request));
+}
 
-   while ((st = client->Read(a, MAXBUF-1)) > 0) {
-      a[st] = 0;
-      html += a;
-   }
-
-   parser.procesarFiguras(html);
-   std::vector<std::string> figuras = parser.getFiguras();
-
-   if (!figuras.empty()) {
-      std::string piezaElegida = figuras[1];
-      int parteElegida = 1;
-
-      std::string path = "/lego/list.php?figure=" + piezaElegida + "&part=" + std::to_string(parteElegida);      
-      std::string requestFigurePiezas = 
+void ClientRequestFigure(VSocket* client, std::string figuraElegida, int parteElegida, const char* service) {
+   char * os = (char *) "os.ecci.ucr.ac.cr";
+   std::string path = "/lego/list.php?figure=" + figuraElegida + "&part=" + std::to_string(parteElegida);      
+   std::string requestFigurePiezas = 
          "GET " + path + " HTTP/1.1\r\n"
          "Host: os.ecci.ucr.ac.cr\r\n"
          "Connection: close\r\n"
          "\r\n";
+   std::cout << "[Servidor] Figura " << figuraElegida << std::endl;
+   client->Connect(os, service);
+   client->Write((char*)requestFigurePiezas.c_str(), requestFigurePiezas.length());
+}
 
-      std::cout << "Figura elegida " << piezaElegida << std::endl;
+int main( int argc, char * argv[] ) {
+   (void)argv;
+   char a[MAXBUF];
+   Parser parser;
+   VSocket * client;
+   std::string html;
+   int st;
+   bool running = true;
+   const char* service = argc > 1 ? "https" : "http";
+   if (argc > 1) {
+      client = new SSLSocket();
+   } else {
+      client = new Socket('s');
+   }
+   std::vector<std::string> figuras;
 
-      delete client;
-      if (argc > 1) {
-         client = new SSLSocket(); 
-      }else {
-         client = new Socket('s');
-      }
-      client->Connect(os, (argc > 1 ? "https" : "http"));
-      client->Write((char*)requestFigurePiezas.c_str(), requestFigurePiezas.length());
+   std::cout << "You can do:" << std::endl;
+   std::string comandoLista = "GET/FiguresList";
+   std::string comandoFigura = "GET/Figure";
+   std::string comandoSalir = "Exit";
 
-      std::string htmlPieza;
-      while ((st = client->Read(a, MAXBUF-1)) > 0) {
-         a[st] = 0;
-         htmlPieza += a;
-      }
-      parser.procesarPiezas(htmlPieza);
-      auto listaPiezas = parser.getPiezas();
+   std::cout << comandoLista << std::endl;
+   std::cout << comandoFigura +"_Name/Half" << std::endl;
+   std::cout << comandoSalir;
 
-      if (listaPiezas.empty()) {
-         std::cout << "No se pudieron parsear las piezas." << std::endl;
-      } else {
-         for (const auto &p : listaPiezas) {
-            std::cout << "Cantidad: " << p.second << "  Pieza: " << p.first << std::endl;
+   std::string comando;
+   while (running) {
+      std::cout<< "\n[Cliente] Comando:";
+      std::cin >> comando;
+      std::cout << std::endl;
+      if (comando == comandoLista) {
+         if (figuras.empty()) {
+            html.clear();
+            ClientRequestList(client, service);
+            memset(a, 0, MAXBUF);
+            while ((st = client->Read(a, MAXBUF-1)) > 0) {
+               a[st] = 0;
+               html += a;
+            }
+            parser.procesarFiguras(html);
+            figuras = parser.getFiguras();
+            std::cout << "[Servidor] Lista de figuras en el servidor:\n";
+            for (const auto &p : figuras) {
+               std::cout << p << std::endl;
+            }
+         } else {
+            std::cout << "[Servidor] Lista de figuras en el servidor:\n";
+            for (const auto &p : figuras) {
+               std::cout << p << std::endl;
+            }
          }
+      }  else if (comando.find("GET/Figure_") == 0) {
+         if (figuras.empty()) {
+            html.clear();
+            ClientRequestList(client, service);
+            memset(a, 0, MAXBUF);
+            while ((st = client->Read(a, MAXBUF-1)) > 0) {
+               a[st] = 0;
+               html += a;
+            }
+            parser.procesarFiguras(html);
+            figuras = parser.getFiguras();
+         }
+         std::string resto = comando.substr(11);
+         size_t pos = resto.find("/");
+         int parteElegida;
+         std::string piezaElegida = resto.substr(0, pos);
+         bool piezaValida = false;
+         for (const auto &p: figuras) {
+            if (p == piezaElegida) {
+               piezaValida = true;
+            }
+         }
+         if (!piezaValida) {
+            std::cout << "Figura: " << piezaElegida << " no existe en el servidor" << std::endl;
+            continue;
+         }
+         if (isdigit(resto[pos + 1])) {
+            parteElegida  = std::stoi(resto.substr(pos + 1));
+            if (parteElegida > 2) {
+               std::cout << "Parte elegida incorrecta, ingrese (1|2)" << std::endl;
+               continue;
+            }
+         } else {
+            std::cout << "Parte elegida incorrecta, debe ser un valor numerico!" << std::endl;
+            continue;
+         }
+         delete client;
+         if (argc > 1) {
+            client = new SSLSocket();
+         } else {
+            client = new Socket('s');
+         }
+         ClientRequestFigure(client, piezaElegida, parteElegida, service);
+      
+         std::string htmlPieza;
+         while ((st = client->Read(a, MAXBUF-1)) > 0) {
+            a[st] = 0;
+            htmlPieza += a;
+         }
+         parser.procesarPiezas(htmlPieza);
+         auto listaPiezas = parser.getPiezas();
+
+         if (listaPiezas.empty()) {
+            std::cout << "No se pudieron parsear las piezas." << std::endl;
+         } else {
+            for (const auto &p : listaPiezas) {
+               std::cout << "Pieza: " << p.first << "  Cantidad: " << p.second << std::endl;
+            }
+         }
+      } else if (comando == comandoSalir) {
+         std::cout << "[Servidor] Cerrando comunicacion" << std::endl;
+         break;
+      } else {
+         std::cout << "Comando Invalido!" << std::endl;
       }
    }
    delete client;

@@ -6,7 +6,13 @@
 #include "SSLSocket.hpp"
 #include "Parser.hpp"
 
+#include "Logger.hpp"
+
 #define MAXBUF 1024
+
+// Despues metemos esto en el main.
+Logger log("./logs.txt");
+
 
 void ClientRequestList(VSocket* client, const char* service) {
    char * os = (char *) "os.ecci.ucr.ac.cr";
@@ -16,6 +22,10 @@ void ClientRequestList(VSocket* client, const char* service) {
       "Connection: close\r\n"
       "\r\n";
    client->Connect(os, service);
+   std::string mlog =  "Conexion establecida: "; 
+   mlog += os;
+   log.log(mlog.c_str());
+   log.log(request);
    client->Write(request, strlen(request));
 }
 
@@ -29,10 +39,16 @@ void ClientRequestFigure(VSocket* client, std::string figuraElegida, int parteEl
          "\r\n";
    std::cout << "[Servidor] Figura " << figuraElegida << std::endl;
    client->Connect(os, service);
+   std::string mlog =  "Conexion establecida: "; 
+   mlog += os;
+   log.log(mlog.c_str());
+   log.log(requestFigurePiezas );
    client->Write((char*)requestFigurePiezas.c_str(), requestFigurePiezas.length());
+
 }
 
 int main( int argc, char * argv[] ) {
+
    (void)argv;
    char a[MAXBUF];
    Parser parser;
@@ -61,6 +77,7 @@ int main( int argc, char * argv[] ) {
    while (running) {
       std::cout<< "\n[Cliente] Comando:";
       std::cin >> comando;
+      log.log(comando.c_str(), Usuario);
       std::cout << std::endl;
       if (comando == comandoLista) {
          if (figuras.empty()) {
@@ -71,14 +88,22 @@ int main( int argc, char * argv[] ) {
                a[st] = 0;
                html += a;
             }
+            
             parser.procesarFiguras(html);
             figuras = parser.getFiguras();
+
+            
+
+            log.logv(figuras, Server);
+
             std::cout << "[Servidor] Lista de figuras en el servidor:\n";
+
             for (const auto &p : figuras) {
                std::cout << p << std::endl;
             }
          } else {
             std::cout << "[Servidor] Lista de figuras en el servidor:\n";
+            log.log("Lista de figuras en el servidor:", Server);
             for (const auto &p : figuras) {
                std::cout << p << std::endl;
             }
@@ -92,8 +117,10 @@ int main( int argc, char * argv[] ) {
                a[st] = 0;
                html += a;
             }
+            
             parser.procesarFiguras(html);
             figuras = parser.getFiguras();
+            log.logv(figuras, Server);
          }
          std::string resto = comando.substr(11);
          size_t pos = resto.find("/");
@@ -144,6 +171,7 @@ int main( int argc, char * argv[] ) {
          }
       } else if (comando == comandoSalir) {
          std::cout << "[Servidor] Cerrando comunicacion" << std::endl;
+         log.log("Cerrando comunicacion", Server);
          break;
       } else {
          std::cout << "Comando Invalido!" << std::endl;

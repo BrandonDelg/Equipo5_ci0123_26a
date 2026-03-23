@@ -3,11 +3,13 @@
 #include <fstream>
 #include <string>
 #include <ctime>
+#include <vector>
 
 enum Nodo {
 Cliente,
 Tenedor,
-Server
+Server,
+Usuario
 }; 
 
 class Logger
@@ -21,7 +23,10 @@ private:
 public:
   Logger(std::string dir);
   ~Logger();
-  void log (std::string txt, Nodo t = Cliente);
+  void log(std::string txt, Nodo t = Cliente);
+  void logv(std::vector<std::string>& txt, Nodo t);
+private:
+  void loadTime();
 };
 
 

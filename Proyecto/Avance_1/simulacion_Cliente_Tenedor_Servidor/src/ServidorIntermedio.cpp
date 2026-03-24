@@ -1,3 +1,7 @@
+/**
+ * @file ServidorIntermedio.cpp
+ * @brief Implementación del servidor intermedio
+ */
 #include "ServidorIntermedio.hpp"
 #include "ServidorPiezas.hpp"
 #include "Cliente.hpp"

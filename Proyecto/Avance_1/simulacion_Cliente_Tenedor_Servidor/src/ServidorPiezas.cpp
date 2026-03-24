@@ -1,3 +1,7 @@
+/**
+ * @file ServidorPiezas.cpp
+ * @brief Implementación de la clase Servidor de Piezas
+ */
 #include "ServidorPiezas.hpp"
 #include "ServidorIntermedio.hpp"
 #include "Cliente.hpp"

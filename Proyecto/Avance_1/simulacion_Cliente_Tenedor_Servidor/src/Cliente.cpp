@@ -1,3 +1,7 @@
+/**
+ * @file Cliente.cpp
+ * @brief Implementación del Cliente
+ */
 #include "Cliente.hpp"
 #include "ServidorIntermedio.hpp"
 

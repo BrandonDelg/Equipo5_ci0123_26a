@@ -123,3 +123,138 @@
 	[>]	gjkjgkgr
 [2026-03-23 17:48:56] [Usuario]: 
 	[>]	GET/Figure_Name/lion
+[2026-03-24 10:16:45] [Usuario]: 
+	[>]	GET/Figure_lion/Half
+[2026-03-24 10:16:45] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 10:16:45] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1
+	[>]	Host: os.ecci.ucr.ac.cr
+	[>]	Connection: close
+	[>]	
+	[>]	
+[2026-03-24 10:16:45] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 10:16:57] [Usuario]: 
+	[>]	GET/Figure_lion/2
+[2026-03-24 10:16:57] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 10:16:57] [Cliente]: 
+	[>]	GET /lego/list.php?figure=lion&part=2 HTTP/1.1
+	[>]	Host: os.ecci.ucr.ac.cr
+	[>]	Connection: close
+	[>]	
+	[>]	
+[2026-03-24 10:18:36] [Usuario]: 
+	[>]	Exit
+[2026-03-24 10:18:36] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-24 10:18:55] [Usuario]: 
+	[>]	Get/FiguresList
+[2026-03-24 10:19:04] [Usuario]: 
+	[>]	GET/FiguresList
+[2026-03-24 10:19:04] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 10:19:04] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1
+	[>]	Host: os.ecci.ucr.ac.cr
+	[>]	Connection: close
+	[>]	
+	[>]	
+[2026-03-24 10:19:04] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 10:20:09] [Usuario]: 
+	[>]	GET/FigureList
+[2026-03-24 10:20:09] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 10:20:25] [Usuario]: 
+	[>]	GET/FiguresList
+[2026-03-24 10:20:25] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 10:20:25] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1
+	[>]	Host: os.ecci.ucr.ac.cr
+	[>]	Connection: close
+	[>]	
+	[>]	
+[2026-03-24 10:20:25] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 10:20:36] [Usuario]: 
+	[>]	GET/Figure_Lion/1
+[2026-03-24 10:20:45] [Usuario]: 
+	[>]	GET/Figure_lion/11
+[2026-03-24 10:20:45] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 10:20:56] [Usuario]: 
+	[>]	GET/Figure_leion/1
+[2026-03-24 10:21:06] [Usuario]: 
+	[>]	GET/Figure_lion/1
+[2026-03-24 10:21:06] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 10:21:06] [Cliente]: 
+	[>]	GET /lego/list.php?figure=lion&part=1 HTTP/1.1
+	[>]	Host: os.ecci.ucr.ac.cr
+	[>]	Connection: close
+	[>]	
+	[>]	
+[2026-03-24 10:21:09] [Usuario]: 
+	[>]	Exit
+[2026-03-24 10:21:09] [Server]: 
+	[>]	Cerrando comunicacion

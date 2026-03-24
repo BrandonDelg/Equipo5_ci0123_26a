@@ -13,7 +13,8 @@
 
 /**
  * @brief Función de los hilos router(Servidor intermedio)
- * @param Puntero a servidor intermedio
+ *
+ * @param arg Puntero a servidor intermedio
  */
 void* router_thread(void* arg) {
     ((ServidorIntermedio*)arg)->listen();
@@ -22,7 +23,8 @@ void* router_thread(void* arg) {
 
 /**
  * @brief Función de los hilos piezas(Servidor de piezas)
- * @param Puntero a servidor de piezas
+ *
+ * @param arg Puntero a servidor de piezas
  */
 void* piezas_thread(void* arg) {
     ((ServidorPiezas*)arg)->listen();

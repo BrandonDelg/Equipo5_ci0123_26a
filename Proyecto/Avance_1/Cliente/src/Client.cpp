@@ -11,7 +11,7 @@
 #define MAXBUF 1024
 
 // Despues metemos esto en el main.
-Logger log("./logs.txt");
+Logger log("./logs.log");
 
 
 void ClientRequestList(VSocket* client, const char* service) {
@@ -140,10 +140,12 @@ int main( int argc, char * argv[] ) {
             parteElegida  = std::stoi(resto.substr(pos + 1));
             if (parteElegida > 2) {
                std::cout << "Parte elegida incorrecta, ingrese (1|2)" << std::endl;
+               log.log("Comando invalido", Cliente);
                continue;
             }
          } else {
             std::cout << "Parte elegida incorrecta, debe ser un valor numerico!" << std::endl;
+            log.log("Comando invalido", Cliente);
             continue;
          }
          delete client;
@@ -175,6 +177,7 @@ int main( int argc, char * argv[] ) {
          break;
       } else {
          std::cout << "Comando Invalido!" << std::endl;
+         log.log("Comando invalido", Cliente);
       }
    }
    delete client;

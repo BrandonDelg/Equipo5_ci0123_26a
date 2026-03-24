@@ -258,3 +258,182 @@
 	[>]	Exit
 [2026-03-24 10:21:09] [Server]: 
 	[>]	Cerrando comunicacion
+[2026-03-24 11:00:16] [Usuario]: 
+	[>]	GET/FiguresList
+[2026-03-24 11:00:16] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 11:00:16] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1
+ [>] Host: os.ecci.ucr.ac.cr
+ [>] Connection: close
+ [>] 
+ [>] 
+[2026-03-24 11:00:16] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 11:01:07] [Usuario]: 
+	[>]	GET/FiguresList
+[2026-03-24 11:01:07] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 11:01:07] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1
+ [>] Host: os.ecci.ucr.ac.cr
+ [>] Connection: close
+ [>] 
+ [>] 
+[2026-03-24 11:01:07] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 11:03:52] [Usuario]: 
+	[>]	GET/FiguresList
+[2026-03-24 11:03:52] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 11:03:52] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1 [>]  [>] Host: os.ecci.ucr.ac.cr [>]  [>] Connection: close [>]  [>]  [>]  [>] 
+[2026-03-24 11:03:52] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 11:07:26] [Usuario]: 
+	[>]	
+[2026-03-24 11:07:26] [Cliente]: 
+	[>]	
+[2026-03-24 11:07:26] [Cliente]: 
+	[>]	\r [>] \n [>] \r [>] \n [>] \r [>] \n [>] \r [>] \n [>] 
+[2026-03-24 11:07:26] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 11:08:09] [Usuario]: 
+	[>]	GET/FiguresList
+[2026-03-24 11:08:09] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-24 11:08:09] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-24 11:08:09] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-24 11:10:26] [Usuario]: 
+	[>]	hhh}
+[2026-03-24 11:10:26] [Cliente]: 
+	[>]	Comando invalido
+WARN
+ERROR
+[2026-03-24 11:21:19] [Usuario]: 
+	[>]	fkgj
+[2026-03-24 11:21:19] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 11:21:19] [Usuario]: 
+	[>]	g
+[2026-03-24 11:21:19] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 11:21:19] [Usuario]: 
+	[>]	fg
+[2026-03-24 11:21:19] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 11:21:19] [Usuario]: 
+	[>]	gf
+[2026-03-24 11:21:19] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 11:21:20] [Usuario]: 
+	[>]	gf
+[2026-03-24 11:21:20] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 11:21:20] [Usuario]: 
+	[>]	gf
+[2026-03-24 11:21:20] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-24 11:21:20] [Usuario]: 
+	[>]	fg
+[2026-03-24 11:21:20] [Cliente]: 
+	[>]	Comando invalido
+
+

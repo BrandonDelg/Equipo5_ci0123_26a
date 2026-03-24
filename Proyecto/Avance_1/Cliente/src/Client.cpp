@@ -11,7 +11,7 @@
 #define MAXBUF 1024
 
 // Despues metemos esto en el main.
-Logger log("./logs.txt");
+Logger log("./logs.log");
 
 
 void ClientRequestList(VSocket* client, const char* service) {

@@ -38,10 +38,17 @@ void Logger::log(std::string txt, Nodo t) {
   std::string t_print;
 
   for (char c : txt) {
-    t_print += c;
     if (c == '\n') {
-      t_print += "\t[>]\t";
+      t_print += "\\n";
+      t_print += " [>] ";
+    } else if (c == '\r'){
+      t_print += "\\r";
+      t_print += " [>] ";
+    } else {
+      t_print += c;
     }
+
+
   }
 
   this->logs << "[" << this->fecha << "] " << "[" << nodo << "]: ";

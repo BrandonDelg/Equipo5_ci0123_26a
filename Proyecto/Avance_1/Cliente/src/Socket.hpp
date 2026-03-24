@@ -1,8 +1,18 @@
+/**
+ * @file Socket.hpp
+ * @brief Definición de un socket normal
+ */
 #ifndef Socket_hpp
 #define Socket_hpp
 #include "VSocket.hpp"
 #include <cstddef>
 
+/**
+ * @brief Clase Socket
+ *
+ * Se encarga de construir un socket de conexion sin
+ * ssl para conexiones tipo udp o tcp
+ */
 class Socket : public VSocket {
 
    public:

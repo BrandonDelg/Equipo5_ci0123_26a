@@ -1,3 +1,7 @@
+/**
+ * @file main.cpp
+ * @brief Creación del cliente y interfaz para interactuar
+ */
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
@@ -11,7 +15,15 @@
 #include "Client.hpp"
 #include "Logger.hpp"
 
-#define MAXBUF 1024
+#define MAXBUF 1024 /** Tamaño maximo del buffer */
+/**
+ * @brief Creación del cliente y interfaz para interactuar
+ * 
+ * @param argc Contador de argumentos
+ * @param argv Argumentos, si es más de 1 es https de otra manera http
+ *
+ * @return Ejecución exitosa en 0
+ */
 int main( int argc, char * argv[] ) {
    Client cliente(1);
    Logger log("./logs.log");

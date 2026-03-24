@@ -1,3 +1,7 @@
+/**
+ * @file SSLSocket.cpp
+ * @brief Implementación de la clase SSLSocket
+ */
 // SSL includes
 #include <openssl/ssl.h>
 #include <openssl/err.h>

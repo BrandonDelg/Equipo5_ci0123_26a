@@ -1,3 +1,7 @@
+/**
+ * @file Logger.hpp
+ * @brief Definición de la clase Logger
+ */
 #ifndef LOGGER_HPP
 #define LOGGER_HPP
 #include <fstream>
@@ -6,7 +10,7 @@
 #include <vector>
 
 /**
- * @brief Enum que representa el nodo que genera un evento en bitacora.
+ * @brief Tipo de nodo
  */
 enum Nodo {
 Cliente,

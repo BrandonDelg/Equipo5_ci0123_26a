@@ -1,10 +1,19 @@
+/**
+ * @file SSLSocket.hpp
+ * @brief Definición de la clase SSLSocket
+ */
 #ifndef SSLSocket_hpp
 #define SSLSocket_hpp
 
 #include "VSocket.hpp"
 #include <cstddef>
 
-
+/**
+ * @brief Clase SSLSocket
+ *
+ * Construye un socket usando certificados ssl para comunicación 
+ * segura entre dispositivos
+ */
 class SSLSocket : public VSocket {
 
    public:
@@ -21,13 +30,13 @@ class SSLSocket : public VSocket {
       const char * GetCipher();
 
    private:
-      void InitSSL( bool = false );		// Defaults to create a client context, true if server context needed
+      void InitSSL( bool = false );// Defaults to create a client context, true if server context needed
       void InitContext( bool );
       void LoadCertificates( const char *, const char * );
 
 // Instance variables      
-      void * Context;				// SSL context
-      void * BIO;				// SSL BIO (Basic Input/Output)
+      void * Context;/// SSL context
+      void * BIO;/// SSL BIO (Basic Input/Output)
 
 };
 

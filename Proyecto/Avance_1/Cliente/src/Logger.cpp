@@ -1,3 +1,7 @@
+/**
+ * @file Logger.cpp
+ * @brief Implementación de clase Logger
+ */
 #include <iostream>
 #include <fstream>
 #include "Logger.hpp"

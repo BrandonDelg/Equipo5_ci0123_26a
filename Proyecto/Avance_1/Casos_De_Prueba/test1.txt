@@ -1,2 +1,2 @@
-GET_figures
-Exit
+1
+3

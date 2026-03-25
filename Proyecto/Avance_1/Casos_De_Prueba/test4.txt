@@ -1,3 +1,4 @@
-GET_figures
-GET figure_Lobo 1
-Exit
+1
+2
+Lobo 1
+3

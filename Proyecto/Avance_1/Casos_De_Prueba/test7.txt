@@ -1,3 +1,4 @@
-GET_figures
-GET figure_Perro
-Exit
+1
+2
+Perro
+3

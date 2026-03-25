@@ -45,15 +45,16 @@ void* piezas_thread(void* arg) {
 int main() {
 
     std::vector<std::string> cdp = {
-        "../../Casos_De_Prueba/test1.txt",
-        "../../Casos_De_Prueba/test2.txt",
-        "../../Casos_De_Prueba/test3.txt",
-        "../../Casos_De_Prueba/test4.txt",
-        "../../Casos_De_Prueba/test5.txt",
-        "../../Casos_De_Prueba/test6.txt",
-        "../../Casos_De_Prueba/test7.txt",
-        "../../Casos_De_Prueba/test8.txt",
-        "../../Casos_De_Prueba/test9.txt",
+        "../../Casos_De_Prueba/sim-test1.txt",
+        "../../Casos_De_Prueba/sim-test2.txt",
+        "../../Casos_De_Prueba/sim-test3.txt",
+        "../../Casos_De_Prueba/sim-test4.txt",
+        "../../Casos_De_Prueba/sim-test5.txt",
+        "../../Casos_De_Prueba/sim-test6.txt",
+        "../../Casos_De_Prueba/sim-test7.txt",
+        "../../Casos_De_Prueba/sim-test8.txt",
+        "../../Casos_De_Prueba/sim-test9.txt",
+        "../../Casos_De_Prueba/sim-test10.txt",
     };
 
     Cliente cliente;

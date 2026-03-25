@@ -27,12 +27,14 @@ class ServidorIntermedio {
         ~ServidorIntermedio();
         /**
          * @brief Se conecta al cliente
-         * @param Puntero al cliente que se va a conectar
+         *
+         * @param c Puntero al cliente que se va a conectar
          */
         void Connect(Cliente* c);
         /**
          * @brief Se conecta al servidor de piezas
-         * @param Puntero al servidor de piezas que se va a conectar
+         *
+         * @param s Puntero al servidor de piezas que se va a conectar
          */
         void ConnectServidor(ServidorPiezas* s);
         /**
@@ -44,16 +46,19 @@ class ServidorIntermedio {
         void listen();
         /**
          * @brief Devuelve el mutex de la cola
+         *
          * @return Puntero a mutex
          */
         pthread_mutex_t* getMutex();
         /**
          * @brief Devuelve variable de condición de la cola
+         *
          * @return Puntero a variable de condición
          */
         pthread_cond_t* getVC();
         /**
          * @brief Devuelve la cola de mensajes
+         *
          * @return Referencia a cola de mensajes
          */
         std::queue<Message*>& getQueue();

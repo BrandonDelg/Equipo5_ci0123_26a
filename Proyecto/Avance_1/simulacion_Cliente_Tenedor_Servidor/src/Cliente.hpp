@@ -49,31 +49,37 @@ class Cliente {
         ~Cliente();
         /**
          * @brief Se conecta al servidor
-         * @param Puntero al servidor que se va a conectar
+         *
+         * @param serv Puntero al servidor que se va a conectar
          */
         void Connect(ServidorIntermedio* serv);
         /**
          * @brief Manda una solicitud al servidor
-         * @param Puntero al mensaje empaquetado
+         *
+         * @param package Puntero al mensaje empaquetado
          */
         void send_to_server(void* package);
         /**
          * @brief Recibe mensajes del servidor
+         *
          * @return devueve false si el mensaje es un close en caso contrario true
          */
         bool receive_from_server();
         /**
          * @brief Devuelve la cola de mensajes
+         * 
          * @return Referencia a cola de mensajes
          */
         std::queue<Message*>& getQueue();
         /**
          * @brief Devuelve variable de condición de la cola
+         *
          * @return Puntero a variable de condición
          */
         pthread_cond_t* getVC();
         /**
          * @brief Devuelve el mutex de la cola
+         *
          * @return Puntero a mutex
          */
         pthread_mutex_t* getMutex();

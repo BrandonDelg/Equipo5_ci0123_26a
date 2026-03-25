@@ -29,7 +29,8 @@ class ServidorPiezas {
         ~ServidorPiezas();
         /**
          * @brief Se conecta al servidor intermedio
-         * @param Puntero al servidor intermedio que se va a conectar
+         *
+         * @param r Puntero al servidor intermedio que se va a conectar
          */
         void Connect(ServidorIntermedio* r);
         /**
@@ -46,7 +47,8 @@ class ServidorPiezas {
          * Procesa, valida y responde las solicitudes. Maneja 
          * posibles errores con las solicitudes y retorno las 
          * figuras
-         * @param Puntero a mensaje a procesar
+         *
+         * @param msg Puntero a mensaje a procesar
          */
         void procesarSolicitud(Message* msg);
         pthread_mutex_t* getMutex();
@@ -59,4 +61,4 @@ class ServidorPiezas {
         pthread_mutex_t mutex; /** Mutex de la cola */
         pthread_cond_t cond; /** Variable de condición de la cola */
         bool running; /** Bandera que indica si el servidor esta activo */
-    };
+};

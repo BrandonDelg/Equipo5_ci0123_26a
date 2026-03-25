@@ -1,3 +1,7 @@
+/**
+ * @file Socket.cpp
+ * @brief Implementación de un socket normal
+ */
 #include <sys/socket.h>         // sockaddr_in
 #include <arpa/inet.h>          // ntohs
 #include <unistd.h>		// write, read

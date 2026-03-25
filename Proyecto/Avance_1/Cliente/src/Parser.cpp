@@ -1,3 +1,7 @@
+/**
+ * @file Parser.cpp
+ * @brief Implementación de clase Parser
+ */
 #include "Parser.hpp"
 #include <regex>
 #include <iostream>

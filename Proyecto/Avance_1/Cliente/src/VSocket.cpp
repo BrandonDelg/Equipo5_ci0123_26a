@@ -1,3 +1,7 @@
+/**
+ * @file VSocket.cpp
+ * @brief Implementacion de la clase virtual VSocket
+ */
 #include <sys/socket.h>
 #include <arpa/inet.h>		// ntohs, htons
 #include <stdexcept>            // runtime_error

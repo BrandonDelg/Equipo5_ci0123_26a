@@ -1,3 +1,7 @@
+/**
+ * @file Client.cpp
+ * @brief Implementación del client
+ */
 #include <cstring>
 #include "Client.hpp"
 

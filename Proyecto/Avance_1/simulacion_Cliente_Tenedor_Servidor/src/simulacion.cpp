@@ -62,16 +62,14 @@ int main() {
         std::getline(std::cin, input);
 
         Message* msg = new Message();
-
+        msg->clientId = 1;
         if (input == "1") {
-            msg->type = REQUEST_FIGURE;
-            strcpy(msg->figura, "GET_figures");
+            msg->type = REQUEST_LIST;
+            strcpy(msg->figura, "GET_FIGURES");
             msg->mitad = 0;
-
-            std::cout << "[CLIENTE] Solicita lista de figuras\n";
+            std::cout << "[CLIENTE] Solicita lista de figuras \n";
 
         } else if (input == "2") {
-
             std::string linea;
             std::cout << "Ingrese figura y mitad (ej: Perro 1): ";
             std::getline(std::cin, linea);
@@ -93,12 +91,11 @@ int main() {
             }
 
             msg->type = REQUEST_FIGURE;
-            std::string figuraProtocolo = "figure_" + figura;
+            std::string figuraProtocolo = "Figure_" + figura;
             strcpy(msg->figura, figuraProtocolo.c_str());
             msg->mitad = mitad;
 
-            std::cout << "[CLIENTE] Solicita figura: "
-                      << figura << " mitad: " << mitad << "\n";
+            std::cout << "[CLIENTE] Solicita figura: " << figura << " mitad: " << mitad << "\n";
 
         } else if (input == "3") {
             msg->type = CLOSE;

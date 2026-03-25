@@ -38,7 +38,7 @@ void ServidorPiezas::listen() {
             delete msg;
             break;
         }
-        if(msg->type == REQUEST_FIGURE) {
+        if(msg->type == REQUEST_FIGURE || msg->type == REQUEST_LIST) {
             procesarSolicitud(msg);
         }
         delete msg;
@@ -50,7 +50,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
     std::cout << "[SERVIDOR PIEZAS] Procesando solicitud: " << figura << std::endl;
     bool error = false;
     bool list = false;
-    if (figura == "GET_figures") {
+    if (figura == "GET_FIGURES" && msg->type == REQUEST_LIST) {
         piezas =
         "Listado de Figuras en el servidor :)\n"
         "- Perro \n"
@@ -58,11 +58,11 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
         "- Ballena \n"
         "- Oveja \n";
         list = true;
-    } else if (figura.find("figure_") == 0) {
+    } else if (figura.find("Figure_") == 0 && msg->type == REQUEST_FIGURE) {
 
         std::cout << "[SERVIDOR PIEZAS] Buscando piezas de " << figura << std::endl;
         
-        if (figura == "figure_Perro") {
+        if (figura == "Figure_Perro") {
             if (msg->mitad == 1) {
                 piezas =
                 "lego 1x2 : 4\n"
@@ -77,7 +77,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 piezas = "No existe la mitad indicada:\n";
                 error = true;
             }
-        } else if (figura == "figure_Gato") {
+        } else if (figura == "Figure_Gato") {
             if (msg->mitad == 1) {
                 piezas =
                 "lego 5x2 : 4\n"
@@ -91,7 +91,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 error = true;
             }
 
-        } else if (figura == "figure_Ballena") {
+        } else if (figura == "Figure_Ballena") {
             if (msg->mitad == 1) {
                 piezas =
                 "lego 3x2 : 4\n"
@@ -107,7 +107,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
                 error = true;
             }
 
-        } else if (figura == "figure_Oveja") {
+        } else if (figura == "Figure_Oveja") {
             if (msg->mitad == 1) {
                 piezas =
                 "lego 2x2 : 2\n"

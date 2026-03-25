@@ -10,6 +10,7 @@
  * @brief Tipos o metodos del mensaje
  */
 enum Type {
+    REQUEST_LIST,
     REQUEST_FIGURE,
     RESPONSE_PIECES,
     RESPONSE_FIGURES,
@@ -21,10 +22,11 @@ enum Type {
  * @brief Formato del mensaje
  */
 struct Message {
-    Type type; /** Tipo del mensaje */
-    int mitad; /** Mitad de la figura */
-    char figura[256]; /** Nombre de la figura */
-    char message[256]; /** Mensajes informativos o de error */
+    Type type; // Tipo del mensaje 
+    int mitad; //Mitad de la figura 
+    char figura[256]; // Nombre de la figura
+    char message[256]; // Mensajes informativos o de error
+    int clientId; // ID del cliente con el que interactua
 };
 
 class ServidorIntermedio;

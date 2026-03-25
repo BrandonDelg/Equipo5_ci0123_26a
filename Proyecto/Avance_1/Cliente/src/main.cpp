@@ -64,13 +64,13 @@ int main( int argc, char * argv[] ) {
             log.logv(figuras, Server);
             std::cout << "[Servidor]" << comandoResponseLista << " Lista de figuras en el servidor:\n";
             for (const auto &p : figuras) {
-               std::cout << p << std::endl;
+               std::cout << " - " << p << std::endl;
             }
          } else {
             std::cout << "[Servidor]" << comandoResponseLista  << "Lista de figuras en el servidor:\n";
             log.log("Lista de figuras en el servidor:", Server);
             for (const auto &p : figuras) {
-               std::cout << p << std::endl;
+               std::cout << " - " << p << std::endl;
             }
          }
       } else if (comando == "2") {

@@ -15,6 +15,8 @@ enum Type {
     RESPONSE_PIECES,
     RESPONSE_FIGURES,
     ERROR,
+    ERROR_NOT_FOUND,
+    ERROR_NOT_CONECTION,
     CLOSE
 };
 

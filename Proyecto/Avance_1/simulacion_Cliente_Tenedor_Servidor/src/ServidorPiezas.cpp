@@ -49,6 +49,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
     std::string figura = std::string(msg->figura);
     std::cout << "[SERVIDOR PIEZAS] Procesando solicitud: " << figura << std::endl;
     bool error = false;
+    bool errorF = false;
     bool list = false;
     if (figura == "GET_FIGURES" && msg->type == REQUEST_LIST) {
         piezas =
@@ -168,7 +169,7 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
 
         } else {
             piezas = "La figura ingresada no es valida!\n";
-            error = true;
+            errorF = true;
         }
 
     } else {
@@ -179,6 +180,8 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
     Message* resp = new Message();
     if (error) {
         resp->type = ERROR;
+    } else if (errorF) {
+        msg->type = ERROR_NOT_FOUND;
     } else if (list){
         resp->type = RESPONSE_FIGURES;
     } else {
@@ -200,7 +203,14 @@ void ServidorPiezas::procesarSolicitud(Message* msg) {
 
         std::cout << "[SERVIDOR PIEZAS] Enviando informacion al router" << std::endl;
     } else {
-        std::cout << "[SERVIDOR PIEZAS] ERROR: router no conectado" << std::endl;
+        std::string msgError = "ERROR: router no conectado";
+        resp->type = ERROR_NOT_CONECTION;
+        strncpy(resp->message, msgError.c_str(), sizeof(resp->message) - 1);
+        pthread_mutex_lock(router->getMutex());
+        router->getQueue().push(resp);
+        pthread_cond_signal(router->getVC());
+        pthread_mutex_unlock(router->getMutex());
+        std::cout << "[SERVIDOR PIEZAS]" << msgError << std::endl;
         delete resp;
     }
 }

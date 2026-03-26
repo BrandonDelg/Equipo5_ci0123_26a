@@ -27,15 +27,15 @@
 int main( int argc, char * argv[] ) {
 
    std::vector<std::string> cdp = {
-        "../Casos_De_Prueba/cli-test1.txt",
-        "../Casos_De_Prueba/cli-test2.txt",
-        "../Casos_De_Prueba/cli-test3.txt",
-        "../Casos_De_Prueba/cli-test4.txt",
-        "../Casos_De_Prueba/cli-test5.txt",
-        "../Casos_De_Prueba/cli-test6.txt",
-        "../Casos_De_Prueba/cli-test7.txt",
-        "../Casos_De_Prueba/cli-test8.txt",
-        "../Casos_De_Prueba/cli-test9.txt",
+        "./Casos_De_Prueba/cli-test1.txt",
+        "./Casos_De_Prueba/cli-test2.txt",
+        "./Casos_De_Prueba/cli-test3.txt",
+        "./Casos_De_Prueba/cli-test4.txt",
+        "./Casos_De_Prueba/cli-test5.txt",
+        "./Casos_De_Prueba/cli-test6.txt",
+        "./Casos_De_Prueba/cli-test7.txt",
+        "./Casos_De_Prueba/cli-test8.txt",
+        "./Casos_De_Prueba/cli-test9.txt",
     };
 
    Client cliente(1);

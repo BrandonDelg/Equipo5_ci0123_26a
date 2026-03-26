@@ -1,31 +1,32 @@
-XC=c++
-STD=-std=c++20
-WFLAGS=-Wall -Wextra
-APPNAME=program
+XC = c++
+STD = -std=c++20
+WFLAGS = -Wall -Wextra
+APPNAME = program
 
-# Configuración de cpplint
-CPPLINT_FLAGS=--filter=-readability/casting,-build/header_guard,-build/include_subdir,-runtime/int
+SRC = src
+BUILD = build
+BIN = bin
 
-# Directorios
-SRC=src
-BUILD=build
-BIN=bin
+DIRS = $(shell find -L $(SRC) -type d)
+FSOURCE = $(wildcard $(DIRS:%=%/*.cpp))
+FOBJECT = $(FSOURCE:$(SRC)/%.cpp=$(BUILD)/%.o)
 
-# Archivos
-DIRS=$(shell find -L $(SRC) -type d)
-FSOURCE=$(wildcard $(DIRS:%=%/*.cpp))
-FHEADERS=$(wildcard $(DIRS:%=%/*.hpp))
-FOBJECT=$(FSOURCE:$(SRC)/%.cpp=$(BUILD)/%.o)
+MAINS = simulacion simulacion_casos_de_prueba
 
-.PHONY: all bin build run clean show debug lint
+COMMON_OBJ = $(filter-out $(addprefix $(BUILD)/,$(addsuffix .o,$(MAINS))), $(FOBJECT))
 
-all: $(BIN)/$(APPNAME)
+.PHONY: all clean run debug lint $(MAINS)
 
-$(BIN)/$(APPNAME): $(FOBJECT) | $(BIN)
+all: simulacion
+
+$(MAINS): %: $(BIN)/%
+	@echo "Ejecutable listo: $@"
+
+$(BIN)/%: $(COMMON_OBJ) $(BUILD)/%.o | $(BIN)
 	$(XC) $(STD) $(WFLAGS) -g $^ -o $@
 
 $(BUILD)/%.o: $(SRC)/%.cpp | $(BUILD)
-	$(XC) $(STD) $(WFLAGS) -c -g $^ -o $@
+	$(XC) $(STD) $(WFLAGS) -c -g $< -o $@
 
 $(BIN):
 	mkdir -p $@
@@ -33,23 +34,21 @@ $(BIN):
 $(BUILD):
 	mkdir -p $@
 
-run:
-	./$(BIN)/$(APPNAME)
+run: all
+	./$(BIN)/simulacion
+
+debug: simulacion
+	gdb ./$(BIN)/simulacion
 
 clean:
 	rm -rf $(BIN) $(BUILD)
 
-show:
-	echo $(FOBJECT)
-
-debug: $(BIN)/$(APPNAME)
-	gdb ./$(BIN)/$(APPNAME)
+CPPLINT_FLAGS=--filter=-readability/casting,-build/header_guard,-build/include_subdir,-runtime/int
 
 lint:
 	@echo "Ejecutando cpplint..."
 	@find $(SRC) -name "*.cpp" -o -name "*.hpp" | xargs cpplint $(CPPLINT_FLAGS)
 	@echo "Análisis completado"
-
 
 lint-file:
 	@if [ -z "$(FILE)" ]; then \

@@ -141,9 +141,13 @@ int main( int argc, char * argv[] ) {
             std::cout << "[Servidor][RESPONSE_FIGURE/Figure=" <<  piezaElegida << "/PART=" << parteElegida << "]" << std::endl;
             for (int i = 1; i <= 2; i++) {
                auto listaPiezas = cliente.pedirFigura(piezaElegida, i, argc, service, parser,log);
+               int totalPiezas = 0;
                for (const auto &p : listaPiezas) {
                   std::cout << "Pieza: " << p.first << "  Cantidad: " << p.second << std::endl;
+                  totalPiezas += p.second;
                }
+               std::cout << "Cantidad de piezas totales de la mitad " << parteElegida << " : " << totalPiezas << std::endl;
+
             }
             continue;
          }
@@ -152,9 +156,12 @@ int main( int argc, char * argv[] ) {
             std::cout << "[ERROR] No se pudieron parsear las piezas.\n";
          } else {
             std::cout << "[Servidor][RESPONSE_FIGURE/Figure=" <<  piezaElegida << "/PART=" << parteElegida << "]" << std::endl;
+            int totalPiezas = 0;
             for (const auto &p : listaPiezas) {
                std::cout << "Pieza: " << p.first << "  Cantidad: " << p.second << std::endl;
+               totalPiezas += p.second;
             }
+            std::cout << "Cantidad de piezas totales de la mitad " << parteElegida << " : " << totalPiezas << std::endl;
          }
       } else if (comando == "3") {
          std::cout << comandoSalirServ << " Cerrando comunicacion" << std::endl;

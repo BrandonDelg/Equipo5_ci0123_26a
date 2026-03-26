@@ -1,10 +1,11 @@
 # Como compilar?
 
 ```.
-Desde la carpeta simulacion_cliente_servidor abra la terminal y ejecute:
+Desde la carpeta cliente abra la terminal y ejecute:
 make clean
-make nombre del archivo
-bin/nombre del archivo
+make
+make run // para el cliente
+make run-test // para ejecutar los casos de prueba
 
 ejemplo:
 make simulacion

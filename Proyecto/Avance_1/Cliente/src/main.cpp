@@ -37,8 +37,11 @@ int main( int argc, char * argv[] ) {
    const char* service = argc > 1 ? "https" : "http";
    if (argc > 1) {
       client = new SSLSocket();
+      std::cout << "Usando https!" << std::endl;
    } else {
       client = new Socket('s');
+      std::cout << "Usando http" << std::endl;
+
    }
    std::vector<std::string> figuras;
 

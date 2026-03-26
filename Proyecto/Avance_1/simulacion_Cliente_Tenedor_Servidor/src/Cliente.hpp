@@ -26,7 +26,7 @@ enum Type {
 struct Message {
     Type type; // Tipo del mensaje 
     int mitad; //Mitad de la figura 
-    char figura[1024]; // Nombre de la figura
+    char figura[256]; // Nombre de la figura
     char message[1024]; // Mensajes informativos o de error
     int clientId; // ID del cliente con el que interactua
 };

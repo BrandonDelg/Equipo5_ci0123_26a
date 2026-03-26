@@ -735,3 +735,42 @@ ERROR
 	[>]	3
 [2026-03-25 20:59:25] [Server]: 
 	[>]	Cerrando comunicacion
+[2026-03-25 21:25:31] [Usuario]: 
+	[>]	2
+[2026-03-25 21:25:38] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 21:25:38] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 21:25:38] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-25 21:25:38] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 21:25:38] [Cliente]: 
+	[>]	GET /lego/list.php?figure=lion&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 21:25:38] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 21:25:38] [Cliente]: 
+	[>]	GET /lego/list.php?figure=lion&part=2 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 21:25:46] [Usuario]: 
+	[>]	3
+[2026-03-25 21:25:46] [Server]: 
+	[>]	Cerrando comunicacion

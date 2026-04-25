@@ -1,0 +1,10 @@
+1
+2
+Perro 1
+2
+Gato 2
+2
+Ballena 1
+2
+Oveja 2
+3

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor de Figuras LEGO</title>
+
+    <!-- referencia a archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🧱 Servidor de Figuras LEGO Equipo #5</h1>
+
+    <label for="figure">Figura:</label>
+    <select id="figure">
+        <option value="horse">Horse</option>
+        <option value="elephant">Elephant</option>
+        <option value="giraffe">Giraffe</option>
+        <option value="duck">Duck</option>
+    </select>
+
+    <label for="part">Parte:</label>
+    <select id="part">
+        <option value="0">Completo</option>
+        <option value="1">Primera mitad</option>
+        <option value="2">Segunda mitad</option>
+    </select>
+
+    <button onclick="solicitar()">Solicitar</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

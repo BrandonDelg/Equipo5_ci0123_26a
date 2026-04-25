@@ -1,5 +1,0 @@
-Comando Incorrecto
-Prueba
-Aleatorio
-GET ejemplo
-3

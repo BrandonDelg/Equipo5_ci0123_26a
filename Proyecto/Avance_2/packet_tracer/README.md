@@ -27,7 +27,7 @@ La simulación usa un switch 2960 para conectar un cliente, un intermediario y u
 ![workspace](./assets/workspace.png)
 ![pdulist](./assets/pdulist.png)
 ![simulation](./assets/simulation.png)
-![video](./assets/simulation.mp4)
+[![video](./assets/simulation.gif)](./assets/simulation.mp4)
 
 ## Contraseñas
 

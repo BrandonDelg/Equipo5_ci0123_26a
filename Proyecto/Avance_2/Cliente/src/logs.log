@@ -1,0 +1,343 @@
+[2026-03-25 14:47:20] [Usuario]: 
+	[>]	1
+[2026-03-25 14:47:20] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 14:47:20] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 14:47:20] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-25 14:47:29] [Usuario]: 
+	[>]	2
+[2026-03-25 14:47:41] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 14:47:41] [Cliente]: 
+	[>]	GET /lego/list.php?figure=turtle&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 14:47:47] [Usuario]: 
+	[>]	3
+[2026-03-25 14:47:47] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/list.php?figure=Horse&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/list.php?figure=Horse&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/list.php?figure=blacksheep&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	Comando Incorrecto
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	Prueba
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	Aleatorio
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	GET ejemplo
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	4
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	1
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/list.php?figure=Horse&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/list.php?figure=blacksheep&part=2 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	2
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 15:23:18] [Cliente]: 
+	[>]	GET /lego/list.php?figure=squid&part=2 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 15:23:18] [Usuario]: 
+	[>]	3
+[2026-03-25 15:23:18] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/index.php HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Horse
+	[>]	blacksheep
+	[>]	dragon
+	[>]	duck
+	[>]	elephant
+	[>]	fish
+	[>]	giraffe
+	[>]	hola
+	[>]	horse
+	[>]	lion
+	[>]	monkey
+	[>]	orchid
+	[>]	penguin
+	[>]	q
+	[>]	roadrunner
+	[>]	shark
+	[>]	squid
+	[>]	swan
+	[>]	turtle
+	[>]	whitesheep
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/list.php?figure=Horse&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/list.php?figure=Horse&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/list.php?figure=blacksheep&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	Comando Incorrecto
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	Prueba
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	Aleatorio
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	GET ejemplo
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	4
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Comando invalido
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	1
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Lista de figuras en el servidor:
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/list.php?figure=Horse&part=1 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/list.php?figure=blacksheep&part=2 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	2
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	Conexion establecida: os.ecci.ucr.ac.cr
+[2026-03-25 16:08:30] [Cliente]: 
+	[>]	GET /lego/list.php?figure=squid&part=2 HTTP/1.1\r [>] \n [>] Host: os.ecci.ucr.ac.cr\r [>] \n [>] Connection: close\r [>] \n [>] \r [>] \n [>] 
+[2026-03-25 16:08:30] [Usuario]: 
+	[>]	3
+[2026-03-25 16:08:30] [Server]: 
+	[>]	Cerrando comunicacion

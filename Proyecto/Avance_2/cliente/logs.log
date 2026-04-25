@@ -1,0 +1,100 @@
+[2026-04-13 22:45:48] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-13 22:45:48] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-13 22:48:07] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-13 22:48:07] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-13 22:48:13] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-13 22:48:13] [Cliente]: 
+	[>]	GET /figura/Perro/1 HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-13 22:49:21] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-13 22:49:21] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-13 22:49:26] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-13 22:49:26] [Cliente]: 
+	[>]	GET /figura/Gato/2 HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-17 00:21:49] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-17 00:21:49] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-17 00:22:26] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-17 00:22:26] [Cliente]: 
+	[>]	GET /figura/Perro/2 HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:36:06] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 14:36:06] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:39:06] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 14:39:06] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:42:18] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 14:42:18] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:42:24] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 14:42:24] [Cliente]: 
+	[>]	GET /figura/Gato 1/1 HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:42:33] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 14:42:33] [Cliente]: 
+	[>]	GET /figura/Gato/1 HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:49:48] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 14:49:48] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:54:39] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 14:54:39] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:54:51] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 14:54:51] [Cliente]: 
+	[>]	GET /figura/Gato/1 HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 14:58:55] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 14:58:55] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:03:48] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 15:03:48] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:03:56] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 15:03:56] [Cliente]: 
+	[>]	GET /figura/Perro 1/1 HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:04:02] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 15:04:02] [Cliente]: 
+	[>]	GET /figura/Perro/1 HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:10:29] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 15:10:29] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:35:43] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 15:35:43] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:35:56] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 15:35:56] [Cliente]: 
+	[>]	GET /figura/Perro/1 HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:45:20] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 15:45:20] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:53:07] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 15:53:07] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 15:53:12] [Cliente]: 
+	[>]	Conexion establecida
+[2026-04-25 15:53:12] [Cliente]: 
+	[>]	GET /figura/Gato/1 HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 

@@ -48,6 +48,10 @@ class FileSystem {
         std::vector<std::string> getFiguras();
         int buscarFigura(const std::string& nombre);
         std::string getPiezas(const std::string& figura, int mitad);
+        void freeBlock(int blockNum);
+        bool borrarFigura(const std::string& nombre);
+
+
 };
 
 #endif

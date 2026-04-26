@@ -12,10 +12,20 @@
 #include "Socket.hpp"
 #include "Client.hpp"
 #include "Logger.hpp"
+#include "FileSystem.hpp"
 
 #define MAXBUF 1024 /** Tamaño maximo del buffer */
 
 int main(int argc, char* argv[]) {
+   FileSystem fs("filesystem.dat");
+   fs.crearFigura("Perro",
+      "1\nlego 1x2:4\nlego 2x2:2\nlego 3x2:4\nlego 3x3:2\nlego 3x2:4\nlego 3x3:2\n"
+      "2\nlego 3x2:4\nlego 3x3:2\n");
+
+   fs.crearFigura("Gato",
+      "1\nlego 5x2:4\n"
+      "2\nlego 6x2:4\n");
+
    if (argc < 3) {
       std::cerr << "Uso: " << argv[0] << " <host> <ipv6 0|1>\n";
       return 1;

@@ -2,7 +2,7 @@
 #include <cstring>
 #include <sstream>
 #include <algorithm>
-
+#include <iostream>
 FileSystem::FileSystem(const std::string& filename) {
     disk.open(filename, std::ios::in | std::ios::out | std::ios::binary);
 
@@ -72,6 +72,10 @@ int FileSystem::allocateBlock() {
 void FileSystem::crearFigura(const std::string& nombre, const std::string& contenido) {
     Inode inode;
     inode.size = contenido.size();
+    if (buscarFigura(nombre) != -1) {
+        std::cout << "La figura ya existe: " << nombre << std::endl;
+        return;
+    }
 
     for (int i = 0; i < 8; i++) {
         inode.blocks[i] = -1;
@@ -217,4 +221,44 @@ std::string FileSystem::getPiezas(const std::string& figura, int mitad) {
     }
 
     return resultado;
+}
+
+void FileSystem::freeBlock(int blockNum) {
+    char buffer[BLOCK_SIZE];
+    readBlock(1, buffer);
+    buffer[blockNum] = 0;
+    writeBlock(1, buffer);
+}
+
+bool FileSystem::borrarFigura(const std::string& nombre) {
+    char buffer[BLOCK_SIZE];
+    int current = 2;
+
+    while (current != -1) {
+        readBlock(current, buffer);
+        DirBlock* dir = (DirBlock*)buffer;
+        for (int i = 0; i < 4; i++) {
+            if (nombre == dir->entries[i].nombre) {
+                int inodeBlock = dir->entries[i].inodeBlock;
+                char inodeBuffer[BLOCK_SIZE];
+                readBlock(inodeBlock, inodeBuffer);
+                Inode* inode = (Inode*)inodeBuffer;
+
+                for (int j = 0; j < 8; j++) {
+                    if (inode->blocks[j] != -1) {
+                        freeBlock(inode->blocks[j]);
+                    }
+                }
+
+                freeBlock(inodeBlock);
+
+                memset(&dir->entries[i], 0, sizeof(dir->entries[i]));
+                writeBlock(current, buffer);
+                return true;
+            }
+        }
+        current = dir->nextBlock;
+    }
+
+    return false;
 }

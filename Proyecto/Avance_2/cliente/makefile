@@ -11,7 +11,6 @@ SERVER = $(BIN)/server.out
 CLIENT = $(BIN)/client.out
 INTERMEDIARIO = $(BIN)/intermediario.out
 
-# 🔹 argumentos por defecto (por si no pasás nada)
 ARGS ?= 127.0.0.1 0
 
 DIRS = $(shell find -L $(SRC) -type d)
@@ -54,7 +53,6 @@ $(BUILD):
 $(BIN):
 	mkdir -p $(BIN)
 
-# 🔥 RUN CON ARGUMENTOS
 run-server:
 	./$(SERVER) $(ARGS)
 

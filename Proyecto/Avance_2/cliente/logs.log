@@ -98,3 +98,7 @@
 	[>]	Conexion establecida
 [2026-04-25 15:53:12] [Cliente]: 
 	[>]	GET /figura/Gato/1 HTTP/1.1\r [>] \n [>] Host: ::1\r [>] \n [>] \r [>] \n [>] 
+[2026-04-25 22:21:12] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-04-25 22:21:12] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 

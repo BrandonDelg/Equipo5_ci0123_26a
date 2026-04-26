@@ -16,13 +16,16 @@ ARGS ?= 127.0.0.1 0
 DIRS = $(shell find -L $(SRC) -type d)
 FSOURCE = $(wildcard $(DIRS:%=%/*.cpp))
 
-SERVER_SRC = $(filter %ThreadMirrorServer.cpp %FileSystem.cpp %Socket.cpp %VSocket.cpp, $(FSOURCE))
-CLIENT_SRC = $(filter %main.cpp %Client.cpp %Logger.cpp %Socket.cpp %VSocket.cpp, $(FSOURCE))
-INTERMEDIARIO_SRC = $(filter %Intermediario.cpp %Socket.cpp %VSocket.cpp, $(FSOURCE))
+COMMON_SRC = $(filter %Socket.cpp %VSocket.cpp %FileSystem.cpp, $(FSOURCE))
+
+SERVER_SRC = $(filter %ThreadMirrorServer.cpp, $(FSOURCE)) $(COMMON_SRC)
+CLIENT_SRC = $(filter %main.cpp %Client.cpp %Logger.cpp, $(FSOURCE)) $(COMMON_SRC)
+INTERMEDIARIO_SRC = $(filter %Intermediario.cpp, $(FSOURCE)) $(COMMON_SRC)
 
 SERVER_OBJ = $(SERVER_SRC:$(SRC)/%.cpp=$(BUILD)/%.o)
 CLIENT_OBJ = $(CLIENT_SRC:$(SRC)/%.cpp=$(BUILD)/%.o)
 INTERMEDIARIO_OBJ = $(INTERMEDIARIO_SRC:$(SRC)/%.cpp=$(BUILD)/%.o)
+
 
 .PHONY: all server client intermediario run-server run-client run-intermediario clean
 
@@ -43,6 +46,7 @@ intermediario: $(INTERMEDIARIO)
 $(INTERMEDIARIO): $(INTERMEDIARIO_OBJ) | $(BIN)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
+
 $(BUILD)/%.o: $(SRC)/%.cpp | $(BUILD)
 	mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -61,6 +65,7 @@ run-client:
 
 run-intermediario:
 	./$(INTERMEDIARIO) $(ARGS)
+
 
 clean:
 	rm -rf $(BUILD) $(BIN)

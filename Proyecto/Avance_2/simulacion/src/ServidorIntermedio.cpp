@@ -133,7 +133,7 @@ void ServidorIntermedio::listen() {
             }
             break;
         }
-        if (tipo != 10 && tipo != 14) {
+        if (tipo != 10 && tipo != 14 && tipo != 90) {
             logEvento("ERROR", "UNSUPPORTED_TYPE", "Tipo no soportado recibido del cliente: " + std::to_string(tipo));
             // sendToClient("102|;");
             continue;

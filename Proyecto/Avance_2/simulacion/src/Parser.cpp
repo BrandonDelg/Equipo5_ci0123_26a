@@ -10,27 +10,33 @@ Parser::Parser() {}
 
 Parser::~Parser() {}
 
+
 int Parser::getTipo(const std::string &msg) {
     std::smatch match;
     std::regex re_type(R"(^([^|]+)\|)");
 
     if (std::regex_search(msg, match, re_type)) {
-        return std::stoi(match[1]);
+        std::string val = match[1].str();
+        if (!val.empty()) {
+            return std::stoi(val);
+        }
     }
 
     return 0;
 }
 
-std::string Parser::getFigura(const std::string &msg) {
+std::string Parser::getCampo(const std::string &msg, const std::string &campo) {
     std::smatch match;
-    std::string figura = "figura";
-    std::regex re_valor("\\b" + figura + R"(=([^;]+))");
+    std::regex re(campo + R"(=([^;]+))");
 
-    if (std::regex_search(msg, match, re_valor)) {
-        return match[1];
+    if (std::regex_search(msg, match, re)) {
+        return match[1].str();
     }
+    return "";
+}
 
-    return 0;
+std::string Parser::getFigura(const std::string &msg) {
+    return getCampo(msg, "figura");
 }
 
 int Parser::getMitad(const std::string &msg) {
@@ -45,13 +51,21 @@ int Parser::getMitad(const std::string &msg) {
 }
 
 std::string Parser::getMensaje(const std::string &msg) {
-    std::smatch match;
-    std::string mensaje = "mensaje";
-    std::regex re_valor("\\b" + mensaje + R"(=([^;]+))");
+    return getCampo(msg, "mensaje");
+}
 
-    if (std::regex_search(msg, match, re_valor)) {
-        return match[1];
-    }
+std::string Parser::getId(const std::string &msg) {
+    return getCampo(msg, "id");
+}
 
-    return 0;
+std::string Parser::getIdInt(const std::string &msg) {
+    return getCampo(msg, "idInt");
+}
+
+std::string Parser::getEstado(const std::string &msg) {
+    return getCampo(msg,"estado");
+}
+
+std::string Parser::getTipoRuta(const std::string &msg) {
+    return getCampo(msg,"tipo_ruta");
 }

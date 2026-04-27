@@ -5,6 +5,7 @@
  * @brief Definición de la clase Cliente
  */
 #include <iostream>
+#include <sstream>
 #include <queue>
 #include <pthread.h>
 
@@ -65,6 +66,7 @@ class Cliente {
          */
         pthread_mutex_t* getMutex();
 
+        bool running;
     private:
         Parser parser;
         ServidorIntermedio* server; /** Servidor intermedio con el que se comunica el cliente */

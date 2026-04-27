@@ -9,13 +9,13 @@ Cliente::Cliente() {
     this->server = nullptr;
     pthread_mutex_init(&queueMutex, nullptr);
     pthread_cond_init(&queueCond, nullptr);
+    running = true;
 }
 
 Cliente::~Cliente() {
     pthread_mutex_destroy(&queueMutex);
     pthread_cond_destroy(&queueCond);
 }
-
 void Cliente::Connect(ServidorIntermedio* serv) {
     this->server = serv;
     this->server->Connect(this);
@@ -46,19 +46,27 @@ bool Cliente::receive_from_server() {
     std::string msg = server->getQueue().front();
     server->getQueue().pop();
     pthread_mutex_unlock(mutex_server);
-    if (parser.getTipo(msg) == 02) {
+    int tipo = parser.getTipo(msg);
+    if (tipo == 02) {
+        std::cout << "\n[CLIENTE] Recibido seña de cierre o unregister:" << std::endl;
         return false;
-    }
-
-    if (parser.getTipo(msg) == 15) {
+    } else if (tipo == 15) {
         std::cout << "\n[CLIENTE] Piezas necesarias:" << std::endl;
-    } else if (parser.getTipo(msg) == 16) {
+        std::string piezas = parser.getCampo(msg,"piezas");
+        std::cout << "\n" << piezas << std::endl;
+    } else if (tipo == 16) {
         std::cout << "\n[CLIENTE] ERROR:" << std::endl;
-    } else if (parser.getTipo(msg) == 11) {
+    } else if (tipo == 11) {
         std::cout << "\n[CLIENTE]: Respuesta del servidor" << std::endl;
-    }
+        std::string lista = parser.getFigura(msg);
+        std::string palabra;
 
-    std::cout << "\n" << parser.getMensaje(msg) << std::endl;
+        std::cout << "\nLista de figuras" << std::endl;
+        std::stringstream ss(lista);
+        while (std::getline(ss, palabra, ',')) {
+            std::cout << "- " << palabra << "\n";
+        }
+    }
 
     return true;
 }

@@ -62,7 +62,12 @@ public:
      */
     std::vector<std::pair<std::string, int>> getPiezas() const;
     std::string getMensaje(const std::string &msg);
-
+    std::string getCampo(const std::string&, const std::string&);
+    std::string getId(const std::string &msg);
+    std::vector<std::pair<std::string,int>> getFigurasRegistro(const std::string &msg);
+    std::string getIdInt(const std::string &msg);
+    std::string getEstado(const std::string &msg);
+    std::string getTipoRuta(const std::string &msg);
 
 private:
     std::vector<std::string> Figuras; /** Lista de figuras */

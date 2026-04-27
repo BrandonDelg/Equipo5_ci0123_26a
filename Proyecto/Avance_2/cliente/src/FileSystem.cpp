@@ -73,7 +73,7 @@ void FileSystem::crearFigura(const std::string& nombre, const std::string& conte
     Inode inode;
     inode.size = contenido.size();
     if (buscarFigura(nombre) != -1) {
-        std::cout << "La figura ya existe: " << nombre << std::endl;
+        //std::cout << "La figura ya existe: " << nombre << std::endl;
         return;
     }
 
@@ -180,8 +180,9 @@ int FileSystem::buscarFigura(const std::string& nombre) {
 std::string FileSystem::getPiezas(const std::string& figura, int mitad) {
     int inodeBlock = buscarFigura(figura);
 
-    if (inodeBlock == -1)
-        return "Figura no encontrada\n";
+    if (inodeBlock == -1) {
+        return "";
+    }
 
     char buffer[BLOCK_SIZE];
     readBlock(inodeBlock, buffer);
@@ -208,17 +209,37 @@ std::string FileSystem::getPiezas(const std::string& figura, int mitad) {
     std::string linea, resultado;
     bool leyendo = false;
 
-    while (std::getline(iss, linea)) {
-        if (linea == std::to_string(mitad)) {
-            leyendo = true;
-            continue;
-        }
+    // while (std::getline(iss, linea)) {
+    //     if (linea == std::to_string(mitad)) {
+    //         leyendo = true;
+    //         continue;
+    //     }
 
-        if (leyendo) {
-            if (linea == "1" || linea == "2") break;
+    //     if (leyendo) {
+    //         if (linea == "1" || linea == "2") break;
+    //         resultado += linea + "\n";
+    //     }
+    // }
+    while (std::getline(iss, linea)) {
+    if (linea == std::to_string(mitad)) {
+        leyendo = true;
+        continue;
+    }
+
+    if (leyendo) {
+        if (linea == "1" || linea == "2") break;
+
+        size_t pos = linea.find(':');
+        if (pos != std::string::npos) {
+            std::string pieza = linea.substr(0, pos);
+            std::string cantidad = linea.substr(pos + 1);
+
+            resultado += cantidad + " : " + pieza + "\n";
+        } else {
             resultado += linea + "\n";
         }
     }
+}
 
     return resultado;
 }

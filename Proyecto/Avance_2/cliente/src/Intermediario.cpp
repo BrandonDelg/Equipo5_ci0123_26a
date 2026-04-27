@@ -100,13 +100,13 @@ void task(VSocket* client, bool ipv6) {
             return;
         }
 
-        if (parte != 1 && parte != 2) {
-            std::string http = "HTTP/1.1 400 Bad Request\r\n\r\nMitad fuera de rango";
-            client->Write(http.c_str(), http.length());
-            client->Close();
-            delete client;
-            return;
-        }
+        // if (parte != 1 && parte != 2) {
+        //     std::string http = "HTTP/1.1 400 Bad Request\r\n\r\nMitad fuera de rango";
+        //     client->Write(http.c_str(), http.length());
+        //     client->Close();
+        //     delete client;
+        //     return;
+        // }
 
         internal = "14|figura=" + figura + ";mitad=" + std::to_string(parte);
         valid = true;
@@ -138,13 +138,15 @@ void task(VSocket* client, bool ipv6) {
         size_t pos = response.find("figuras=");
         std::string data = (pos != std::string::npos) ? response.substr(pos + 8) : "";
         http = "HTTP/1.1 200 OK\r\n\r\n" + data;
+    } else if (response.find("105|") == 0) {
+        http = "HTTP/1.1 400 Bad Request\r\n\r\nMitad invalida";
     } else if (response.find("15|") == 0) {
         size_t pos = response.find("piezas=");
         std::string piezas = (pos != std::string::npos) ? response.substr(pos + 7) : "";
         http = "HTTP/1.1 200 OK\r\n\r\n" + piezas;
     } else if (response.find("16|") == 0) {
         http = "HTTP/1.1 404 Not Found\r\n\r\nFigura no encontrada";
-    } else if (response.find("10") == 0) {
+    } else if (response.find("100") == 0) {
         http = "HTTP/1.1 400 Bad Request\r\n\r\nError de protocolo";
     } else {
         http = "HTTP/1.1 500 Internal Server Error\r\n\r\nRespuesta desconocida";

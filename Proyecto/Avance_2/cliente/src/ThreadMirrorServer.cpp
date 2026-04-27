@@ -55,18 +55,18 @@ void task(VSocket* client) {
          size_t posFig = request.find("figura=");
          size_t posMid = request.find(";mitad=");
          if (posFig == std::string::npos || posMid == std::string::npos) {
-               response = "100|";
+               response = "108|";
          } else {
             std::string figura = request.substr(posFig + 7, posMid - (posFig + 7));
             int parte = 0;
             try {
                parte = std::stoi(request.substr(posMid + 7));
             } catch (...) {
-               response = "101|";
+               response = "108|";
             }
 
             if (parte != 1 && parte != 2) {
-               response = "102|";
+               response = "105|";
             } else {
                std::string piezas = fs.getPiezas(figura, parte);
 
@@ -83,7 +83,7 @@ void task(VSocket* client) {
          auto figs = fs.getFiguras();
          response = "11|figuras=";
          for (auto& f : figs) {
-               response += f + ",";
+               response += f + "\n";
          }
       }else if (request.find("99|") == 0) {
          std::cout << "[SERVIDOR] Shutdown recibido\n";
@@ -96,7 +96,7 @@ void task(VSocket* client) {
 
          exit(0);
       } else {
-         response = "100|";
+         response = "107|";
       }
       client->Write(response.c_str(), response.length());
       client->Close();

@@ -1,0 +1,15 @@
+isla5#show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- ---------------
+1    default                          active    Fa0/4, Fa0/5, 7
+                                                Fa0/8, Fa0/9, 1
+                                                Fa0/12, Fa0/135
+                                                Fa0/16, Fa0/179
+                                                Fa0/20, Fa0/213
+                                                Fa0/24, Gi0/1,2
+250  VLAN0250                         active    Fa0/1, Fa0/2
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 

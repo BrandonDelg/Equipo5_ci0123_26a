@@ -95,8 +95,12 @@ int main(int argc, char* argv[]) {
             response = response.substr(pos + 4);
          }
          if (response != "") {
-            std::cout << "Piezas:\n";
-            std::cout << response << std::endl;
+            if (response.find("Error") == 0) {
+               std::cout << response << std::endl;
+            } else {
+               std::cout << "Piezas:\n";
+               std::cout << response << std::endl;
+            }
          }
       } else if (comando == "3") {
          VSocket* client = new Socket('s', ipv6);

@@ -188,26 +188,34 @@ void task(VSocket* client) {
          } else {
             std::string nombre = ruta.substr(0, slash);
             int parte = std::stoi(ruta.substr(slash + 1));
-
-            std::lock_guard<std::mutex> lock(fsMutex);
-            std::string piezas = fs.getPiezas(nombre, parte);
-
-            if (piezas.empty()) {
-               response =
-                  "HTTP/1.1 404 Not Found\r\n"
-                  "Access-Control-Allow-Origin: *\r\n"
-                  "Content-Type: text/plain\r\n"
-                  "\r\n";
-
+            if (parte < 1 || parte > 2) {
+               response = "HTTP/1.1 400 Bad Request\r\n"
+               "Access-Control-Allow-Origin: *\r\n"
+               "Content-Type: text/plain\r\n"
+               "\r\n"
+               "Error : Parte invalida. Debe ser 1 o 2.";
             } else {
-               fs.getPiezas(nombre, parte);
-               //fs.consumirPiezas(nombre, parte);
-
-               response =
-                  "HTTP/1.1 200 OK\r\n"
-                  "Access-Control-Allow-Origin: *\r\n"
-                  "Content-Type: text/plain\r\n"
-                  "\r\n" + piezas;
+               std::lock_guard<std::mutex> lock(fsMutex);
+               std::string piezas = fs.getPiezas(nombre, parte);
+   
+               if (piezas.empty()) {
+                  response =
+                     "HTTP/1.1 404 Not Found\r\n"
+                     "Access-Control-Allow-Origin: *\r\n"
+                     "Content-Type: text/plain\r\n"
+                     "\r\n"
+                     "Error : Figura no existe!";
+   
+               } else {
+                  fs.getPiezas(nombre, parte);
+                  //fs.consumirPiezas(nombre, parte);
+   
+                  response =
+                     "HTTP/1.1 200 OK\r\n"
+                     "Access-Control-Allow-Origin: *\r\n"
+                     "Content-Type: text/plain\r\n"
+                     "\r\n" + piezas;
+               }
             }
          }
       }

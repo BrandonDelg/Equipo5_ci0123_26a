@@ -39,6 +39,26 @@ int inicioBody(char *resp, int n) {
    return 0;
 }
 
+void cerrarServidor() {
+   int id;
+   char resp[512];
+   char *req = "GET /shutdown HTTP/1.0\r\nUser-Agent: nachos\r\n\r\n";
+
+   id = Socket(AF_INET_NachOS, SOCK_STREAM_NachOS);
+   Connect(id, "127.0.0.1", 1234);
+
+   Write(req, strlen(req), id);
+
+   int n = Read(resp, 511, id);
+   if (n > 0) {
+      int inicio = inicioBody(resp, n);
+      Write(resp + inicio, n - inicio, 1);
+      Write("\n", 1, 1);
+   }
+
+   Close(id);
+}
+
 void pedirLista() {
    int id;
    char resp[512];
@@ -110,6 +130,8 @@ int main() {
       } else if (op[0] == '2') {
          pedirFigura();
       } else if (op[0] == '3') {
+         Write("Cerrando servidor...\n", 20, 1);
+         cerrarServidor();
          Write("Saliendo...\n", 11, 1);
          Exit(0);
       } else {

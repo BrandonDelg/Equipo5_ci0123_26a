@@ -511,6 +511,7 @@ void Intermediario::escucharIntermediariosTP() {
             sizeof(ip)
         );
 
+        std::string ipOrigen(ip);
         if (ipOrigen == std::string(SERVER_HOST)) {
             continue;
         }
@@ -633,7 +634,6 @@ void Intermediario::descubrirOtrosIntermediarios() {
     delete udp;
 }
 void Intermediario::procesarMensajeIntermediario(const std::string& raw,const std::string& ipOrigen) {
-    std::cout
     // << "[HANDSHAKE] Procesando mensaje de "
     // << ipOrigen
     // << std::endl;
@@ -996,7 +996,7 @@ int main(int argc, char* argv[]) {
     }
 
     char* SERVER_HOST = argv[1];
-    const char* SERVER_PORT = "1235";
+    const char* SERVER_PORT = "1236";
     bool ipv6 = std::stoi(argv[2]);
     intermediario = new Socket('s', ipv6);
     Intermediario fork(intermediario, SERVER_HOST, SERVER_PORT);

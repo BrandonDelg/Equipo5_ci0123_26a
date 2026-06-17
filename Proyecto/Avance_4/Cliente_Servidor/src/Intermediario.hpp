@@ -19,14 +19,14 @@
 #define FIGURE_NOT_FOUND        4
 
 #define BUFSIZE 512
-#define DISCOVERY_PORT_INTERMEDIARIO 9092
-#define DISCOVERY_PORT_SERVIDOR      9093
+#define DISCOVERY_PORT_INTERMEDIARIO 9094
+#define DISCOVERY_PORT_SERVIDOR      9095
 
 #define PORT_JOIN 3030 // UDP
 #define PUERTO_TP_DESCUBRIMIENTO 3030 // UDP
 #define PORT_HANDSHAKE 3031 // TCP
 
-#define PORT 8085
+#define PORT 8086
 
 // const char* BROADCASTS[] = {
 //     "172.16.123.15",
@@ -38,7 +38,7 @@
 //     "172.16.123.111"
 // };
 const char* BROADCASTS[] = {
-    "192.168.219.255"
+    "172.16.123.95"
 };
 
 struct Ruta {

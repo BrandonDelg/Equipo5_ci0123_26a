@@ -27,13 +27,13 @@
 #include "Socket.hpp"
 
 std::mutex fsMutex;
-#define PORT 1235
+#define PORT 1236
 #define BUFSIZE 512
 
-#define DISCOVERY_PORT_INTERMEDIARIO 9092
-#define DISCOVERY_PORT_SERVIDOR 9093
+#define DISCOVERY_PORT_INTERMEDIARIO 9094
+#define DISCOVERY_PORT_SERVIDOR 9095
 
-#define BROADCAST_ISLA "172.16.123.95"
+#define BROADCAST_ISLA "172.16.123.95" // cambie esto ivan (por el broadcast de su isla)
 
 //#define BROADCAST_ISLA "192.168.0.255"
 

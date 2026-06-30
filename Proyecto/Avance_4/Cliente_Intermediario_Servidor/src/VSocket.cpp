@@ -335,3 +335,24 @@ size_t VSocket::Broadcast(const void* buffer, size_t size,
 // int VSocket::getId() const {
 //     return this->idSocket;
 // }
+
+
+
+
+std::string VSocket::getRemoteIPV4() {
+    int fd = this->idSocket; 
+    struct sockaddr_storage addr;
+    socklen_t len = sizeof(addr);
+    if (getpeername(fd, (struct sockaddr*)&addr, &len) == -1) {
+        return "0.0.0.0"; 
+    }
+    // Procesamos si es IPv4
+    if (addr.ss_family == AF_INET) {
+        struct sockaddr_in* s = (struct sockaddr_in*)&addr;
+        char ipStr[INET_ADDRSTRLEN];
+        inet_ntop(AF_INET, &s->sin_addr, ipStr, sizeof(ipStr));
+        return std::string(ipStr);
+    } 
+
+    return "0.0.0.0";
+}

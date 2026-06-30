@@ -229,13 +229,21 @@ std::string FileSystem::getPiezas(const std::string& figura, int mitad) {
         }
     }
 }
-    resultado += "\nTotal de piezas para armar la mitad " +
-        std::to_string(mitad) +
-        " de la Figura(" +
-        figura +
-        ") es: " +
-        std::to_string(total);
-
+    if (total != 0) {
+        resultado += "\nTotal de piezas para armar la mitad " +
+            std::to_string(mitad) +
+            " de la Figura(" +
+            figura +
+            ") es: " +
+            std::to_string(total);
+    } else {
+        resultado += "La mitad: " + std::to_string(mitad) + " ya ha sido consumida";
+    }
+    
+    if (resultado.empty()) {
+        return "Figura ya ha sido consumida";
+    }
+    consumirMitad(figura, mitad);
     return resultado;
 }
 
@@ -446,5 +454,54 @@ bool FileSystem::agregarPiezas(const std::string& figura, int mitad, const std::
     }
 
     escribirContenido(inodeBlock, nuevo.str());
+    return true;
+}
+
+bool FileSystem::consumirMitad(const std::string& figura, int mitad) {
+    int inodeBlock = buscarFigura(figura);
+
+    if (inodeBlock == -1) {
+        return false;
+    }
+
+    std::string contenido = leerContenidoFigura(inodeBlock);
+
+    std::istringstream iss(contenido);
+    std::ostringstream nuevo;
+
+    std::string linea;
+    bool eliminar = false;
+    bool encontrada = false;
+
+    while (std::getline(iss, linea)) {
+
+        if (linea == std::to_string(mitad)) {
+            eliminar = true;
+            encontrada = true;
+            continue;
+        }
+
+        if (eliminar && (linea == "1" || linea == "2")) {
+            eliminar = false;
+        }
+
+        if (!eliminar) {
+            nuevo << linea << "\n";
+        }
+    }
+
+    if (!encontrada) {
+        return false;
+    }
+
+    std::string nuevoContenido = nuevo.str();
+
+    if (nuevoContenido.find("1") == std::string::npos &&
+        nuevoContenido.find("2") == std::string::npos) {
+        borrarFigura(figura);
+        return false;
+    } else {
+        escribirContenido(inodeBlock, nuevoContenido);
+    }
     return true;
 }

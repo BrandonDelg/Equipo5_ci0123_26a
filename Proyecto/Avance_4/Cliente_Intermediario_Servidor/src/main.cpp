@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
          while (std::getline(ss, linea)) {
             if (!linea.empty()) {
                figuras.push_back(linea);
-               std::cout << "- " << linea << std::endl;
+               std::cout << linea << std::endl;
             }
          }
       } else if (comando == "2") {

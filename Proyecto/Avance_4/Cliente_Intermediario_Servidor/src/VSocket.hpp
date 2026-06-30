@@ -46,6 +46,7 @@ class VSocket {
       void EnableBroadcast();
       size_t Broadcast(const void* buffer, size_t size,
                  const char* broadcastIp, int port);
+      std::string getRemoteIPV4();
 
    protected:
       int idSocket;   // Socket identifier

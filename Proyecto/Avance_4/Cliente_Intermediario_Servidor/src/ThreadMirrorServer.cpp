@@ -33,6 +33,7 @@ std::mutex fsMutex;
 #define DISCOVERY_PORT_INTERMEDIARIO 9092
 #define DISCOVERY_PORT_SERVIDOR 9093
 
+
 #define BROADCAST_ISLA "172.16.123.95"
 
 //#define BROADCAST_ISLA "192.168.0.255"
@@ -264,7 +265,7 @@ void anunciarServidor() {
  *
  **/
 int main(int argc, char* argv[]) {
-   std::thread * worker;
+   //std::thread * worker;
    VSocket * s1, * client;
    if (argc < 2) {
       std::cerr << "Uso: " << argv[0] << "<ipv6 0|1>\n";
@@ -284,7 +285,8 @@ int main(int argc, char* argv[]) {
    announceThread.detach();
    for( ; ; ) {
       client = s1->AcceptConnection();	 	// Wait for a client connection
-      worker = new std::thread( task, client );
+      std::thread worker(task, client);
+      worker.detach();
    }
 
 }

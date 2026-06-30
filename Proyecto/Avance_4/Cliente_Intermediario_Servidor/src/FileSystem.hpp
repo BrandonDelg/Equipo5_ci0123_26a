@@ -54,6 +54,7 @@ class FileSystem {
         void escribirContenido(int inodeBlock, const std::string& contenido);
         std::string leerContenidoFigura(int inodeBlock);
         bool agregarPiezas(const std::string& figura, int mitad, const std::string& piezasNuevas);
+        bool consumirMitad(const std::string& figura, int mitad);
 };
 
 #endif

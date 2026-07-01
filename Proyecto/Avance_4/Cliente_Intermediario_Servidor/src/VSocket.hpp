@@ -39,6 +39,10 @@ class VSocket {
       void SetReceiveTimeout( int seconds );
       //int getId() const;
 
+
+      //interfaces
+      void BindToDevice(const char* ifaceName);
+
 // UDP methods
       // std::size_t sendTo( const void *, std::size_t, void * );
       // std::size_t recvFrom( void *, std::size_t, void * );

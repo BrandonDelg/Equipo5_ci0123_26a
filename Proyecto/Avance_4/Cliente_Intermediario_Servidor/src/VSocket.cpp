@@ -366,3 +366,11 @@ std::string VSocket::getRemoteIPV4() {
 
     return "0.0.0.0";
 }
+
+
+void VSocket::BindToDevice(const char* ifaceName) {
+   int st = setsockopt(this->idSocket, SOL_SOCKET, SO_BINDTODEVICE, ifaceName, strlen(ifaceName) + 1);
+   if (st == -1) {
+      throw std::runtime_error("ERROR BindToDevice()");
+   }
+}

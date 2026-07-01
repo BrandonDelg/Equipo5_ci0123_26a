@@ -29,6 +29,14 @@
 
 #define PORT 8085
 
+
+
+// interfaces
+
+#define INT_PRIV "enp44s0"
+#define INT_PUBLIC "wlp0s20f3"
+
+
 const char* BROADCASTS[] = {
     "172.16.123.15",
     "172.16.123.31",

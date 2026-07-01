@@ -5,6 +5,7 @@
 #include <sstream>
 #include "FileSystem.hpp"
 
+
 // Intermediario::Intermediario(VSocket* fork, char* host, const char* port)
 //     : SERVER_HOST(host), SERVER_PORT(port), intermediario(fork) {}
 
@@ -315,6 +316,7 @@ void Intermediario::iniciarDescubrimientoIntermediarios() {
 // puerto 3030 Join UDP
 void Intermediario::escucharIntermediariosTP() {
   VSocket* udp = new Socket('d', false);
+  udp->BindToDevice(INT_PRIV);
   udp->Bind(PORT_JOIN);
   std::cout << "[TP UDP] Intermediario escuchando en puerto " << PORT_JOIN
             << std::endl;
@@ -381,6 +383,7 @@ void Intermediario::escucharIntermediariosTP() {
 }
 void Intermediario::descubrirOtrosIntermediarios() {
   VSocket* udp = new Socket('d', false);
+  udp->BindToDevice(INT_PRIV);
   udp->EnableBroadcast();
   in_addr sourceIp {};
   ProtoSS::Join join(sourceIp);
@@ -459,6 +462,7 @@ std::string Intermediario::obtenerFigurasLocalesComoCSV() {
 void Intermediario::escucharSolicitudesTP() {
 
   VSocket* listener = new Socket('s', false);
+  listener->BindToDevice(INT_PRIV);
   listener->Bind(PORT_HANDSHAKE);
   listener->MarkPassive(5);
   std::cout << "[TP TCP] Escuchando solicitudes en puerto " << PORT_HANDSHAKE
@@ -705,6 +709,7 @@ int main(int argc, char* argv[]) {
   std::cout << "Intermediario escuchando en puerto " << PORT << "...\n";
   while (true) {
     VSocket* client = fork.getFork()->AcceptConnection();
+    client->BindToDevice(INT_PUBLIC);
     std::thread(&Intermediario::task, &fork, client, ipv6).detach();
   }
   return 0;

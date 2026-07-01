@@ -1,0 +1,821 @@
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030[TP UDP] Intermediario escuchando en puerto 
+3030[BROADCAST] enviando a 172.16.123.47
+:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.47:30303030
+
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto 3030[BROADCAST] enviando a 172.16.123.47:
+3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085[TP UDP] Intermediario escuchando en puerto ...
+3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.79:3030
+3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] Intermediario escuchando en puerto Intermediario escuchando en puerto 8085...
+3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.111:30303030
+
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.47:3030
+3030[BROADCAST] enviando a 172.16.123.63:
+3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto 3030[BROADCAST] enviando a 172.16.123.47:3030
+
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto 3030[BROADCAST] enviando a 172.16.123.31
+:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+3030[BROADCAST] enviando a 172.16.123.47:3030
+
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111[TP UDP] JOIN recibido desde :172.16.123.83
+3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.95:3030
+3030
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31[TP UDP] Intermediario escuchando en puerto :3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a [TP UDP] JOIN recibido desde 172.16.123.111172.16.123.83:
+3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a [TP UDP] Intermediario escuchando en puerto 172.16.123.1113030:3030
+
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 3030
+172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+3030[BROADCAST] enviando a 172.16.123.63:3030
+
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.15:30303030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TP UDP] Intermediario escuchando en puerto 3030
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[TP UDP] Intermediario escuchando en puerto [BROADCAST] enviando a 172.16.123.31:3030
+3030[BROADCAST] enviando a 172.16.123.47:3030
+
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[BROADCAST] enviando a 172.16.123.111:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+./bin/intermediario.out 172.16.123.84 0
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[BROADCAST] enviando a 172.16.123.15:3030
+[BROADCAST] enviando a 172.16.123.31:3030
+[TP UDP] Intermediario escuchando en puerto 3030
+[TP TCP] Escuchando solicitudes en puerto 3031
+[BROADCAST] enviando a 172.16.123.47:3030
+[BROADCAST] enviando a 172.16.123.63:3030
+[BROADCAST] enviando a 172.16.123.79:3030
+[BROADCAST] enviando a 172.16.123.95:3030
+[TP UDP] JOIN recibido desde 172.16.123.83
+[BROADCAST] enviando a 172.16.123.111:3030
+Intermediario escuchando en puerto 8085...
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.83:3031
+[TP TCP] HANDSHAKE recibido
+la ip remota es172.16.123.83
+[HANDSHAKE] puerto=3031 figuras=Ballena,Carro,Gato,Oveja,Perro,duck
+[TABLA GLOBAL] Ruta remota agregada: Ballena -> 172.16.123.83:3031
+[TABLA GLOBAL] Ruta remota agregada: Carro -> 172.16.123.83:3031
+[TABLA GLOBAL] Ruta remota agregada: Gato -> 172.16.123.83:3031
+[TABLA GLOBAL] Ruta remota agregada: Oveja -> 172.16.123.83:3031
+[TABLA GLOBAL] Ruta remota agregada: Perro -> 172.16.123.83:3031
+[TABLA GLOBAL] Ruta remota agregada: duck -> 172.16.123.83:3031
+   [Descubierta] Ballena - 172.16.123.83:3031
+   [Descubierta] Carro - 172.16.123.83:3031
+   [Descubierta] Gato - 172.16.123.83:3031
+   [Descubierta] Oveja - 172.16.123.83:3031
+   [Descubierta] Perro - 172.16.123.83:3031
+   [Descubierta] duck - 172.16.123.83:3031
+[TP TCP] HANDSHAKE recibido
+la ip remota es172.16.123.100
+[HANDSHAKE] puerto=3031 figuras=duck,fish,giraffe,horse,lion,pablo
+[TABLA GLOBAL] Ruta remota agregada: duck -> 172.16.123.100:3031
+[TABLA GLOBAL] Ruta remota agregada: fish -> 172.16.123.100:3031
+[TABLA GLOBAL] Ruta remota agregada: giraffe -> 172.16.123.100:3031
+[TABLA GLOBAL] Ruta remota agregada: horse -> 172.16.123.100:3031
+[TABLA GLOBAL] Ruta remota agregada: lion -> 172.16.123.100:3031
+[TABLA GLOBAL] Ruta remota agregada: pablo -> 172.16.123.100:3031
+[TP UDP] JOIN recibido desde 172.16.123.51
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.51:3031
+   [Descubierta] caballo - 172.16.123.51:3031
+   [Descubierta] tortuga - 172.16.123.51:3031
+   [Descubierta] furro - 172.16.123.51:3031
+[TP UDP] JOIN recibido desde 172.16.123.35
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.35:3031
+   [Descubierta] death_star_ii - 172.16.123.35:3031
+   [Descubierta] dragon - 172.16.123.35:3031
+   [Descubierta] fish - 172.16.123.35:3031
+   [Descubierta] giraffe - 172.16.123.35:3031
+   [Descubierta] horse - 172.16.123.35:3031
+   [Descubierta] imperial_destroyer - 172.16.123.35:3031
+   [Descubierta] millennium_falcon - 172.16.123.35:3031
+[TP UDP] JOIN recibido desde 172.16.123.51
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.51:3031
+   [Descubierta] caballo - 172.16.123.51:3031
+   [Descubierta] tortuga - 172.16.123.51:3031
+   [Descubierta] furro - 172.16.123.51:3031
+[TP UDP] JOIN recibido desde 172.16.123.35
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.35:3031
+   [Descubierta] death_star_ii - 172.16.123.35:3031
+   [Descubierta] dragon - 172.16.123.35:3031
+   [Descubierta] fish - 172.16.123.35:3031
+   [Descubierta] giraffe - 172.16.123.35:3031
+   [Descubierta] horse - 172.16.123.35:3031
+   [Descubierta] imperial_destroyer - 172.16.123.35:3031
+   [Descubierta] millennium_falcon - 172.16.123.35:3031
+[TP UDP] JOIN recibido desde 172.16.123.51
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.51:3031
+   [Descubierta] caballo - 172.16.123.51:3031
+   [Descubierta] tortuga - 172.16.123.51:3031
+   [Descubierta] furro - 172.16.123.51:3031
+[TP UDP] JOIN recibido desde 172.16.123.35
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.35:3031
+   [Descubierta] death_star_ii - 172.16.123.35:3031
+   [Descubierta] dragon - 172.16.123.35:3031
+   [Descubierta] fish - 172.16.123.35:3031
+   [Descubierta] giraffe - 172.16.123.35:3031
+   [Descubierta] horse - 172.16.123.35:3031
+   [Descubierta] imperial_destroyer - 172.16.123.35:3031
+   [Descubierta] millennium_falcon - 172.16.123.35:3031
+[TP UDP] JOIN recibido desde 172.16.123.51
+[TABLA] Ruta local agregada: Perro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Gato -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Ballena -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Oveja -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: Carro -> 172.16.123.84:1235
+[TABLA] Ruta local agregada: duck -> 172.16.123.84:1235
+[TP TCP] HANDSHAKE enviado a 172.16.123.51:3031
+   [Descubierta] caballo - 172.16.123.51:3031
+   [Descubierta] tortuga - 172.16.123.51:3031
+   [Descubierta] furro - 172.16.123.51:3031

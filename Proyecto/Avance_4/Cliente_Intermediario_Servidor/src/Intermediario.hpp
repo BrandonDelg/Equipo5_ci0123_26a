@@ -34,7 +34,7 @@
 // interfaces
 
 #define INT_PRIV "enp44s0"
-#define INT_PUBLIC "wlp0s20f3"
+#define INT_PUBLIC "enx00e04c3f7e20"
 
 
 const char* BROADCASTS[] = {

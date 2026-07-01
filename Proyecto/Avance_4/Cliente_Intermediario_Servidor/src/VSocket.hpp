@@ -36,6 +36,7 @@ class VSocket {
       virtual VSocket * AcceptConnection() = 0;
       int Shutdown( int );		// cause all or part of a full-duplex connection on the socket
                                         // associated with the file descriptor socket to be shut down
+      void SetReceiveTimeout( int seconds );
       //int getId() const;
 
 // UDP methods

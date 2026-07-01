@@ -260,6 +260,16 @@ int VSocket::Shutdown( int mode ) {
    return st;
 }
 
+void VSocket::SetReceiveTimeout( int seconds ) {
+   struct timeval tv;
+   tv.tv_sec = seconds;
+   tv.tv_usec = 0;
+   int st = setsockopt( this->idSocket, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv) );
+   if ( st == -1 ) {
+      throw std::runtime_error( "VSocket::SetReceiveTimeout" );
+   }
+}
+
 
 // UDP methods 2025
 

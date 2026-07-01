@@ -8,6 +8,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <exception>
 #include "VSocket.hpp"
 #include "Socket.hpp"
 #include "Client.hpp"
@@ -48,30 +49,36 @@ int main(int argc, char* argv[]) {
 
       if (comando == "1") {
          VSocket* client = new Socket('s', ipv6);
-         cliente.ClientRequestList(client, service, log, host);
-         std::string response;
-         while ((st = client->Read(buffer, MAXBUF-1)) > 0) {
-            buffer[st] = 0;
-            response += buffer;
-         }
-         delete client;
-         size_t pos = response.find("\r\n\r\n");
-         if (pos != std::string::npos) {
-            response = response.substr(pos + 4);
-         }
-
-         std::cout << "Figuras disponibles:\n";
-
-         std::stringstream ss(response);
-         std::string linea;
-
-         figuras.clear();
-
-         while (std::getline(ss, linea)) {
-            if (!linea.empty()) {
-               figuras.push_back(linea);
-               std::cout << linea << std::endl;
+         try {
+            client->SetReceiveTimeout(5);
+            cliente.ClientRequestList(client, service, log, host);
+            std::string response;
+            while ((st = client->Read(buffer, MAXBUF-1)) > 0) {
+               buffer[st] = 0;
+               response += buffer;
             }
+            delete client;
+            size_t pos = response.find("\r\n\r\n");
+            if (pos != std::string::npos) {
+               response = response.substr(pos + 4);
+            }
+
+            std::cout << "Figuras disponibles:\n";
+
+            std::stringstream ss(response);
+            std::string linea;
+
+            figuras.clear();
+
+            while (std::getline(ss, linea)) {
+               if (!linea.empty()) {
+                  figuras.push_back(linea);
+                  std::cout << linea << std::endl;
+               }
+            }
+         } catch (const std::exception&) {
+            delete client;
+            std::cerr << "\nError: no se pudo conectar al servidor\n\n";
          }
       } else if (comando == "2") {
          std::string figura;
@@ -82,30 +89,38 @@ int main(int argc, char* argv[]) {
          std::getline(std::cin, parte);
          int p = std::stoi(parte);
          VSocket* client = new Socket('s', ipv6);
-         cliente.ClientRequestFigure(client, figura, p, service, log, host);
-         std::string response;
-         while ((st = client->Read(buffer, MAXBUF-1)) > 0) {
-            buffer[st] = 0;
-            response += buffer;
-         }
-
-         delete client;
-         size_t pos = response.find("\r\n\r\n");
-         if (pos != std::string::npos) {
-            response = response.substr(pos + 4);
-         }
-         if (response != "") {
-            if (response.find("Error") == 0) {
-               std::cout << response << std::endl;
-            } else {
-               std::cout << "Piezas:\n";
-               std::cout << response << std::endl;
+         try {
+            client->SetReceiveTimeout(5);
+            cliente.ClientRequestFigure(client, figura, p, service, log, host);
+            std::string response;
+            while ((st = client->Read(buffer, MAXBUF-1)) > 0) {
+               buffer[st] = 0;
+               response += buffer;
             }
+            delete client;
+            size_t pos = response.find("\r\n\r\n");
+            if (pos != std::string::npos) {
+               response = response.substr(pos + 4);
+            }
+            if (response != "") {
+               if (response.find("Error") == 0) {
+                  std::cout << response << std::endl;
+               } else {
+                  std::cout << "Piezas:\n";
+                  std::cout << response << std::endl;
+               }
+            }
+         } catch (const std::exception&) {
+            delete client;
+            std::cerr << "\nError: no se pudo conectar al servidor\n\n";
          }
       } else if (comando == "3") {
          VSocket* client = new Socket('s', ipv6);
          std::cout << "Saliendo...\n";
-         cliente.CloseConnection(client, service, host);
+         try {
+            client->SetReceiveTimeout(5);
+            cliente.CloseConnection(client, service, host);
+         } catch (const std::exception&) {}
          running = false;
          delete client;
       } else {

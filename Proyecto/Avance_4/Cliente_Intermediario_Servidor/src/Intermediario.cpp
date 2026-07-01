@@ -305,7 +305,7 @@ void Intermediario::agregarRutaLocal(const std::string& figura,
             << ":" << port << std::endl;
 }
 void Intermediario::iniciarDescubrimientoIntermediarios() {
-  actualizarFigurasDesdeServidorLocal(false);
+  //actualizarFigurasDesdeServidorLocal(false);
   std::thread udpListener(&Intermediario::escucharIntermediariosTP, this);
   udpListener.detach();
   std::thread tcpListener(&Intermediario::escucharSolicitudesTP, this);
@@ -330,9 +330,10 @@ void Intermediario::escucharIntermediariosTP() {
     if (tipo == ProtoSS::INTERMEDIARY_JOIN) {
         inet_ntop(AF_INET, &sender.sin_addr, ip, sizeof(ip));
         std::string ipOrigen(ip);
-        if (ipOrigen == std::string(SERVER_HOST)) {
+        if (SERVER_HOST != nullptr &&
+          ipOrigen == SERVER_HOST) {
           continue;
-    }
+        }
       std::cout << "[TP UDP] JOIN recibido desde " << ipOrigen << std::endl;
       actualizarFigurasDesdeServidorLocal(false);
       ProtoSS::Handshake handshake(obtenerFigurasLocalesComoCSV());
@@ -693,11 +694,11 @@ int main(int argc, char* argv[]) {
   intermediario = new Socket('s', ipv6);
   // Intermediario fork(intermediario, SERVER_HOST, SERVER_PORT);
   Intermediario fork(intermediario);
+  fork.iniciarDescubrimientoIntermediarios();
   std::thread serverDiscovery(
     &Intermediario::escucharServidorLocal,
     &fork
   );
-  fork.iniciarDescubrimientoIntermediarios();
     serverDiscovery.detach();
   fork.getFork()->Bind(PORT);
   fork.getFork()->MarkPassive(5);

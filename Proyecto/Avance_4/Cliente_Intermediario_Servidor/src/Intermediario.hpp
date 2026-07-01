@@ -57,7 +57,9 @@ struct PaqueteTP {
 
 class Intermediario {
     public:
-        Intermediario(VSocket* fork, char* SERVER_HOST, const char* SERVER_PORT);
+        //Intermediario(VSocket* fork, char* SERVER_HOST, const char* SERVER_PORT);
+        Intermediario(VSocket* fork);
+
         ~Intermediario();
         void task(VSocket* client, bool ipv6);
         std::string consultarServidorLocal(const std::string& ruta, bool ipv6);
@@ -75,6 +77,8 @@ class Intermediario {
         std::string obtenerFigurasGlobales();
         void eliminarRutasLocales(const std::string& figura);
         void limpiarTablaRutas();
+        void escucharServidorLocal();
+
 
 
 
@@ -83,7 +87,7 @@ class Intermediario {
 
     private:
         char* SERVER_HOST;
-        const char* SERVER_PORT;
+        char* SERVER_PORT;
         VSocket* intermediario;
         std::mutex mutexTabla;
         std::map<std::string,std::list<Ruta>> tablaRutas;

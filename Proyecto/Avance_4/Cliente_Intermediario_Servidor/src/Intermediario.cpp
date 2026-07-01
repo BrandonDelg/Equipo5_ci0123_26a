@@ -5,14 +5,29 @@
 #include <sstream>
 #include "FileSystem.hpp"
 
-Intermediario::Intermediario(VSocket* fork, char* host, const char* port)
-    : SERVER_HOST(host), SERVER_PORT(port), intermediario(fork) {}
+// Intermediario::Intermediario(VSocket* fork, char* host, const char* port)
+//     : SERVER_HOST(host), SERVER_PORT(port), intermediario(fork) {}
+
+Intermediario::Intermediario(VSocket* fork)
+    : SERVER_HOST(nullptr), SERVER_PORT(nullptr), intermediario(fork) {
+      SERVER_PORT = strdup("1235");
+    }
+
+
 Intermediario::~Intermediario() {
+  if (SERVER_HOST != nullptr) {
+    free(SERVER_HOST);
+  }
+
+  if (SERVER_PORT != nullptr) {
+    free(SERVER_PORT);
+  }
   if (intermediario != nullptr) {
     intermediario->Close();
     delete intermediario;
   }
 }
+
 void Intermediario::task(VSocket* client, bool ipv6) {
   std::string figura;
   int parte = 0;
@@ -178,6 +193,10 @@ void Intermediario::task(VSocket* client, bool ipv6) {
 //TODO(brandon) Tener todas las rutas de mis servidores de figuras locales
 std::string Intermediario::consultarServidorLocal(const std::string& ruta,
                                                   bool ipv6) {
+  while (SERVER_HOST == nullptr) {
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+  }
+
   VSocket* server = new Socket('s', ipv6);
   while (true) {
     try {
@@ -580,6 +599,53 @@ std::string Intermediario::obtenerFigurasGlobales() {
   return resultado;
 }
 
+void Intermediario::escucharServidorLocal() {
+    VSocket* udp = new Socket('d', false);
+
+    udp->Bind(9092);
+
+    while (true) {
+        char buffer[512] = {0};
+
+        sockaddr_in sender;
+        memset(&sender,0,sizeof(sender));
+
+        int st = udp->recvFrom(
+            buffer,
+            sizeof(buffer)-1,
+            &sender
+        );
+
+        if (st <= 0)
+            continue;
+
+        buffer[st]=0;
+
+        std::string mensaje = buffer;
+
+        if (mensaje.find("SERVER_JOIN") == 0) {
+
+          char ip[INET_ADDRSTRLEN];
+          inet_ntop(AF_INET, &sender.sin_addr, ip, sizeof(ip));
+
+          if (SERVER_HOST != nullptr && strcmp(SERVER_HOST, ip) == 0) {
+              return;
+          }
+
+          if (SERVER_HOST != nullptr) {
+              free(SERVER_HOST);
+          }
+
+          SERVER_HOST = strdup(ip);
+          SERVER_PORT = strdup("1235");
+
+          std::cout << "[DISCOVERY] servidor local encontrado: "
+                    << SERVER_HOST << std::endl;
+
+          actualizarFigurasDesdeServidorLocal(false);
+      }
+    }
+}
 
 void Intermediario::limpiarTablaRutas() {
     std::lock_guard<std::mutex> lock(mutexTabla);
@@ -617,16 +683,22 @@ void Intermediario::eliminarRutasLocales(const std::string& figura) {
 }
 int main(int argc, char* argv[]) {
   VSocket* intermediario;
-  if (argc < 3) {
+  if (argc < 2) {
     std::cerr << "Uso: " << argv[0] << " <host> <ipv6 0|1>\n";
     return 1;
   }
-  char* SERVER_HOST = argv[1];
-  const char* SERVER_PORT = "1235";
-  bool ipv6 = std::stoi(argv[2]);
+  //char* SERVER_HOST = argv[1];
+  //const char* SERVER_PORT = "1235";
+  bool ipv6 = std::stoi(argv[1]);
   intermediario = new Socket('s', ipv6);
-  Intermediario fork(intermediario, SERVER_HOST, SERVER_PORT);
+  // Intermediario fork(intermediario, SERVER_HOST, SERVER_PORT);
+  Intermediario fork(intermediario);
+  std::thread serverDiscovery(
+    &Intermediario::escucharServidorLocal,
+    &fork
+  );
   fork.iniciarDescubrimientoIntermediarios();
+    serverDiscovery.detach();
   fork.getFork()->Bind(PORT);
   fork.getFork()->MarkPassive(5);
   std::cout << "Intermediario escuchando en puerto " << PORT << "...\n";

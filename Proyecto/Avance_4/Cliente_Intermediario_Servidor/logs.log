@@ -674,3 +674,11 @@
 	[>]	Conexion establecida
 [2026-06-26 17:06:32] [Cliente]: 
 	[>]	GET /figura/Perro/1 HTTP/1.1\r [>] \n [>] Host: 192.168.0.15\r [>] \n [>] \r [>] \n [>] 
+[2026-06-30 23:14:00] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-06-30 23:14:00] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
+[2026-06-30 23:26:25] [Cliente]: 
+	[>]	Conexion establecida al servidor local
+[2026-06-30 23:26:25] [Cliente]: 
+	[>]	GET /figuras HTTP/1.1\r [>] \n [>] Host: 127.0.0.1\r [>] \n [>] \r [>] \n [>] 
